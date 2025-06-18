@@ -3,8 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 56;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		60B2AF5E0AAE182E32F87D58 /* Pods_grint_test_grint_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210177CC10D5EE9D7FCA1E82 /* Pods_grint_test_grint_testUITests.framework */; };
+		7085B0E92E03849F000AE56C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0DC2E03849F000AE56C /* AppDelegate.swift */; };
+		7085B0EA2E03849F000AE56C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0DD2E03849F000AE56C /* SceneDelegate.swift */; };
+		7085B0EB2E03849F000AE56C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0E02E03849F000AE56C /* HomeViewController.swift */; };
+		7085B0EC2E03849F000AE56C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7085B0DF2E03849F000AE56C /* Home.storyboard */; };
+		7085B0ED2E03849F000AE56C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7085B0E32E03849F000AE56C /* Assets.xcassets */; };
+		7085B0EE2E03849F000AE56C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7085B0E52E03849F000AE56C /* LaunchScreen.storyboard */; };
+		7085B0F22E0384B6000AE56C /* grint_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0F02E0384B6000AE56C /* grint_testTests.swift */; };
+		7085B0F62E0384BF000AE56C /* grint_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0F32E0384BF000AE56C /* grint_testUITests.swift */; };
+		7085B0F72E0384BF000AE56C /* grint_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0F42E0384BF000AE56C /* grint_testUITestsLaunchTests.swift */; };
+		BEED65CCA2E433617FEB8460 /* Pods_grint_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF5967524A9E72EB467B4E1 /* Pods_grint_testTests.framework */; };
+		F970F673A09FF8FD76ED9D8A /* Pods_grint_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98CEA2A7227847BCF5FCFC6E /* Pods_grint_test.framework */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		70DFF1CB2E034872004F4EFF /* PBXContainerItemProxy */ = {
@@ -24,47 +39,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03605C0ADB4B48D4053261CA /* Pods-grint-test-grint-testUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grint-test-grint-testUITests.release.xcconfig"; path = "Target Support Files/Pods-grint-test-grint-testUITests/Pods-grint-test-grint-testUITests.release.xcconfig"; sourceTree = "<group>"; };
+		11BFA2FC7AAF6E606F7CF31F /* Pods-grint-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grint-test.debug.xcconfig"; path = "Target Support Files/Pods-grint-test/Pods-grint-test.debug.xcconfig"; sourceTree = "<group>"; };
+		210177CC10D5EE9D7FCA1E82 /* Pods_grint_test_grint_testUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_grint_test_grint_testUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		408A8F5426C0CDECDA7A4070 /* Pods-grint-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grint-testTests.release.xcconfig"; path = "Target Support Files/Pods-grint-testTests/Pods-grint-testTests.release.xcconfig"; sourceTree = "<group>"; };
+		5AB8F292E1998FA28E2E90D4 /* Pods-grint-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grint-testTests.debug.xcconfig"; path = "Target Support Files/Pods-grint-testTests/Pods-grint-testTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7085B0DC2E03849F000AE56C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7085B0DD2E03849F000AE56C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7085B0DF2E03849F000AE56C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		7085B0E02E03849F000AE56C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7085B0E32E03849F000AE56C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7085B0E42E03849F000AE56C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7085B0E72E03849F000AE56C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7085B0F02E0384B6000AE56C /* grint_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grint_testTests.swift; sourceTree = "<group>"; };
+		7085B0F32E0384BF000AE56C /* grint_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grint_testUITests.swift; sourceTree = "<group>"; };
+		7085B0F42E0384BF000AE56C /* grint_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grint_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		70DFF1B42E034871004F4EFF /* grint-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "grint-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF1CA2E034872004F4EFF /* grint-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grint-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF1D42E034872004F4EFF /* grint-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grint-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98CEA2A7227847BCF5FCFC6E /* Pods_grint_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_grint_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE363D5EA6555FE3D51BE059 /* Pods-grint-test-grint-testUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grint-test-grint-testUITests.debug.xcconfig"; path = "Target Support Files/Pods-grint-test-grint-testUITests/Pods-grint-test-grint-testUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EBF5967524A9E72EB467B4E1 /* Pods_grint_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_grint_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED41D306DAB284597638683D /* Pods-grint-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grint-test.release.xcconfig"; path = "Target Support Files/Pods-grint-test/Pods-grint-test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		70DFF1DC2E034872004F4EFF /* Exceptions for "grint-test" folder in "grint-test" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 70DFF1B32E034871004F4EFF /* grint-test */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		70DFF1B62E034871004F4EFF /* grint-test */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				70DFF1DC2E034872004F4EFF /* Exceptions for "grint-test" folder in "grint-test" target */,
-			);
-			path = "grint-test";
-			sourceTree = "<group>";
-		};
-		70DFF1CD2E034872004F4EFF /* grint-testTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "grint-testTests";
-			sourceTree = "<group>";
-		};
-		70DFF1D72E034872004F4EFF /* grint-testUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "grint-testUITests";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		70DFF1B12E034871004F4EFF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F970F673A09FF8FD76ED9D8A /* Pods_grint_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEED65CCA2E433617FEB8460 /* Pods_grint_testTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,19 +84,85 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60B2AF5E0AAE182E32F87D58 /* Pods_grint_test_grint_testUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7085B0DE2E03849F000AE56C /* Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
+				7085B0DC2E03849F000AE56C /* AppDelegate.swift */,
+				7085B0DD2E03849F000AE56C /* SceneDelegate.swift */,
+			);
+			path = Lifecycle;
+			sourceTree = "<group>";
+		};
+		7085B0E12E03849F000AE56C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7085B0DF2E03849F000AE56C /* Home.storyboard */,
+				7085B0E02E03849F000AE56C /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7085B0E22E03849F000AE56C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7085B0E12E03849F000AE56C /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7085B0E62E03849F000AE56C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7085B0E32E03849F000AE56C /* Assets.xcassets */,
+				7085B0E52E03849F000AE56C /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7085B0E82E03849F000AE56C /* grint-test */ = {
+			isa = PBXGroup;
+			children = (
+				7085B0DE2E03849F000AE56C /* Lifecycle */,
+				7085B0E22E03849F000AE56C /* Modules */,
+				7085B0E62E03849F000AE56C /* Resources */,
+				7085B0E72E03849F000AE56C /* Info.plist */,
+			);
+			path = "grint-test";
+			sourceTree = "<group>";
+		};
+		7085B0F12E0384B6000AE56C /* grint-testTests */ = {
+			isa = PBXGroup;
+			children = (
+				7085B0F02E0384B6000AE56C /* grint_testTests.swift */,
+			);
+			path = "grint-testTests";
+			sourceTree = "<group>";
+		};
+		7085B0F52E0384BF000AE56C /* grint-testUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7085B0F32E0384BF000AE56C /* grint_testUITests.swift */,
+				7085B0F42E0384BF000AE56C /* grint_testUITestsLaunchTests.swift */,
+			);
+			path = "grint-testUITests";
+			sourceTree = "<group>";
+		};
 		70DFF1AB2E034871004F4EFF = {
 			isa = PBXGroup;
 			children = (
-				70DFF1B62E034871004F4EFF /* grint-test */,
-				70DFF1CD2E034872004F4EFF /* grint-testTests */,
-				70DFF1D72E034872004F4EFF /* grint-testUITests */,
+				7085B0E82E03849F000AE56C /* grint-test */,
+				7085B0F12E0384B6000AE56C /* grint-testTests */,
+				7085B0F52E0384BF000AE56C /* grint-testUITests */,
 				70DFF1B52E034871004F4EFF /* Products */,
+				E0DC2A015CA024D945D88C89 /* Pods */,
+				E9B7E935DA9531E5C2A31684 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +176,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E0DC2A015CA024D945D88C89 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11BFA2FC7AAF6E606F7CF31F /* Pods-grint-test.debug.xcconfig */,
+				ED41D306DAB284597638683D /* Pods-grint-test.release.xcconfig */,
+				CE363D5EA6555FE3D51BE059 /* Pods-grint-test-grint-testUITests.debug.xcconfig */,
+				03605C0ADB4B48D4053261CA /* Pods-grint-test-grint-testUITests.release.xcconfig */,
+				5AB8F292E1998FA28E2E90D4 /* Pods-grint-testTests.debug.xcconfig */,
+				408A8F5426C0CDECDA7A4070 /* Pods-grint-testTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E9B7E935DA9531E5C2A31684 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98CEA2A7227847BCF5FCFC6E /* Pods_grint_test.framework */,
+				210177CC10D5EE9D7FCA1E82 /* Pods_grint_test_grint_testUITests.framework */,
+				EBF5967524A9E72EB467B4E1 /* Pods_grint_testTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,20 +207,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70DFF1DD2E034872004F4EFF /* Build configuration list for PBXNativeTarget "grint-test" */;
 			buildPhases = (
+				A51111A3798BAF95612AAEAA /* [CP] Check Pods Manifest.lock */,
 				70DFF1B02E034871004F4EFF /* Sources */,
 				70DFF1B12E034871004F4EFF /* Frameworks */,
 				70DFF1B22E034871004F4EFF /* Resources */,
+				96704617AC629C3CAA446B61 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				70DFF1B62E034871004F4EFF /* grint-test */,
-			);
 			name = "grint-test";
-			packageProductDependencies = (
-			);
 			productName = "grint-test";
 			productReference = 70DFF1B42E034871004F4EFF /* grint-test.app */;
 			productType = "com.apple.product-type.application";
@@ -134,6 +226,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70DFF1E22E034872004F4EFF /* Build configuration list for PBXNativeTarget "grint-testTests" */;
 			buildPhases = (
+				BE178BFFE64853CEDB313615 /* [CP] Check Pods Manifest.lock */,
 				70DFF1C62E034872004F4EFF /* Sources */,
 				70DFF1C72E034872004F4EFF /* Frameworks */,
 				70DFF1C82E034872004F4EFF /* Resources */,
@@ -143,12 +236,7 @@
 			dependencies = (
 				70DFF1CC2E034872004F4EFF /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				70DFF1CD2E034872004F4EFF /* grint-testTests */,
-			);
 			name = "grint-testTests";
-			packageProductDependencies = (
-			);
 			productName = "grint-testTests";
 			productReference = 70DFF1CA2E034872004F4EFF /* grint-testTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -157,21 +245,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70DFF1E52E034872004F4EFF /* Build configuration list for PBXNativeTarget "grint-testUITests" */;
 			buildPhases = (
+				E69817A39F602BD1E9603333 /* [CP] Check Pods Manifest.lock */,
 				70DFF1D02E034872004F4EFF /* Sources */,
 				70DFF1D12E034872004F4EFF /* Frameworks */,
 				70DFF1D22E034872004F4EFF /* Resources */,
+				73B1516E3F790F73A114559B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				70DFF1D62E034872004F4EFF /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				70DFF1D72E034872004F4EFF /* grint-testUITests */,
-			);
 			name = "grint-testUITests";
-			packageProductDependencies = (
-			);
 			productName = "grint-testUITests";
 			productReference = 70DFF1D42E034872004F4EFF /* grint-testUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -207,8 +292,6 @@
 				Base,
 			);
 			mainGroup = 70DFF1AB2E034871004F4EFF;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 70DFF1B52E034871004F4EFF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,6 +308,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7085B0EC2E03849F000AE56C /* Home.storyboard in Resources */,
+				7085B0ED2E03849F000AE56C /* Assets.xcassets in Resources */,
+				7085B0EE2E03849F000AE56C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,11 +330,117 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		73B1516E3F790F73A114559B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-grint-test-grint-testUITests/Pods-grint-test-grint-testUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-grint-test-grint-testUITests/Pods-grint-test-grint-testUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-grint-test-grint-testUITests/Pods-grint-test-grint-testUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96704617AC629C3CAA446B61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-grint-test/Pods-grint-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-grint-test/Pods-grint-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-grint-test/Pods-grint-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A51111A3798BAF95612AAEAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-grint-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE178BFFE64853CEDB313615 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-grint-testTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E69817A39F602BD1E9603333 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-grint-test-grint-testUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		70DFF1B02E034871004F4EFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7085B0E92E03849F000AE56C /* AppDelegate.swift in Sources */,
+				7085B0EA2E03849F000AE56C /* SceneDelegate.swift in Sources */,
+				7085B0EB2E03849F000AE56C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7085B0F22E0384B6000AE56C /* grint_testTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +456,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7085B0F62E0384BF000AE56C /* grint_testUITests.swift in Sources */,
+				7085B0F72E0384BF000AE56C /* grint_testUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,9 +476,21 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		7085B0E52E03849F000AE56C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7085B0E42E03849F000AE56C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		70DFF1DE2E034872004F4EFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11BFA2FC7AAF6E606F7CF31F /* Pods-grint-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +519,7 @@
 		};
 		70DFF1DF2E034872004F4EFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED41D306DAB284597638683D /* Pods-grint-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -461,6 +669,7 @@
 		};
 		70DFF1E32E034872004F4EFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AB8F292E1998FA28E2E90D4 /* Pods-grint-testTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -480,6 +689,7 @@
 		};
 		70DFF1E42E034872004F4EFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 408A8F5426C0CDECDA7A4070 /* Pods-grint-testTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +709,7 @@
 		};
 		70DFF1E62E034872004F4EFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE363D5EA6555FE3D51BE059 /* Pods-grint-test-grint-testUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -516,6 +727,7 @@
 		};
 		70DFF1E72E034872004F4EFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03605C0ADB4B48D4053261CA /* Pods-grint-test-grint-testUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
