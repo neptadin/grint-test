@@ -13,9 +13,7 @@ final class HomeViewController: UIViewController, Reusable {
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private var tableView: UITableView!
 
-    private var viewModel: HomeViewModel {
-        didSet { bind() }
-    }
+    private var viewModel: HomeViewModel
 
     init?(coder: NSCoder, viewModel: HomeViewModel) {
         self.viewModel = viewModel
@@ -28,17 +26,31 @@ final class HomeViewController: UIViewController, Reusable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupUI()
+        bind()
+
+        viewModel.loadPosts()
     }
 }
 
 // MARK: - UI
 private extension HomeViewController {
     func setupUI() {
-
+        view.backgroundColor = .black
+        tableView.backgroundColor = .clear
     }
 
     func bind() {
-        
+        viewModel.onLoadingStateChanged = { [weak self] loading in
+            guard let self else { return }
+
+            if viewModel.isFirstLoad {
+                loading ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
+            } else {
+                
+            }
+        }
     }
 }
 

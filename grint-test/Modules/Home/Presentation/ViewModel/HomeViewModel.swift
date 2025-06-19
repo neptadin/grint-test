@@ -25,8 +25,8 @@ final class HomeViewModel {
         fetchPostsUseCase.execute(nextPage) { [weak self] result in
             guard let self else { return }
             defer {
-                isFirstLoad = false
                 onLoadingStateChanged?(false)
+                isFirstLoad = false
             }
 
             switch result {
