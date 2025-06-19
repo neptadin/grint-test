@@ -45,6 +45,7 @@
 		7085B0F72E0384BF000AE56C /* grint_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0F42E0384BF000AE56C /* grint_testUITestsLaunchTests.swift */; };
 		70AB29352E045F8F001B7894 /* AnyAsyncUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29342E045F89001B7894 /* AnyAsyncUseCase.swift */; };
 		70AB29372E0465D1001B7894 /* AnySyncUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29362E0465CA001B7894 /* AnySyncUseCase.swift */; };
+		70AB293D2E046B42001B7894 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB293C2E046B3F001B7894 /* HomeViewModel.swift */; };
 		BEED65CCA2E433617FEB8460 /* Pods_grint_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF5967524A9E72EB467B4E1 /* Pods_grint_testTests.framework */; };
 		F970F673A09FF8FD76ED9D8A /* Pods_grint_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98CEA2A7227847BCF5FCFC6E /* Pods_grint_test.framework */; };
 /* End PBXBuildFile section */
@@ -110,6 +111,7 @@
 		7085B0F42E0384BF000AE56C /* grint_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grint_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		70AB29342E045F89001B7894 /* AnyAsyncUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyAsyncUseCase.swift; sourceTree = "<group>"; };
 		70AB29362E0465CA001B7894 /* AnySyncUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnySyncUseCase.swift; sourceTree = "<group>"; };
+		70AB293C2E046B3F001B7894 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		70DFF1B42E034871004F4EFF /* grint-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "grint-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF1CA2E034872004F4EFF /* grint-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grint-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF1D42E034872004F4EFF /* grint-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grint-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,8 +178,10 @@
 		7070116C2E03972E00134CC4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				70AB293A2E046986001B7894 /* View */,
 				707011A62E03C4AD00134CC4 /* Entity */,
+				70AB293B2E046A5D001B7894 /* ViewModel */,
+				70AB293A2E046986001B7894 /* Controllers */,
+				70AB293E2E046E90001B7894 /* View */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -205,10 +209,10 @@
 		7070117B2E03A61300134CC4 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				7070117E2E03AFDF00134CC4 /* Entity */,
 				707011972E03BCBD00134CC4 /* Mapper */,
 				707011962E03BCB100134CC4 /* Repository */,
 				707011872E03B34900134CC4 /* DataSource */,
-				7070117E2E03AFDF00134CC4 /* Entity */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -251,9 +255,9 @@
 		707011922E03BC6400134CC4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				707011932E03BC7700134CC4 /* Entity */,
 				707011A22E03C45C00134CC4 /* Mapper */,
 				707011A32E03C46600134CC4 /* UseCase */,
-				707011932E03BC7700134CC4 /* Entity */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -389,10 +393,25 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
-		70AB293A2E046986001B7894 /* View */ = {
+		70AB293A2E046986001B7894 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				7085B0E02E03849F000AE56C /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		70AB293B2E046A5D001B7894 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				70AB293C2E046B3F001B7894 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		70AB293E2E046E90001B7894 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				7085B0DF2E03849F000AE56C /* Home.storyboard */,
 			);
 			path = View;
@@ -693,6 +712,7 @@
 				707011AC2E03C6F900134CC4 /* UiRedditPostsEntry.swift in Sources */,
 				707011682E03944800134CC4 /* Reusable.swift in Sources */,
 				70AB29352E045F8F001B7894 /* AnyAsyncUseCase.swift in Sources */,
+				70AB293D2E046B42001B7894 /* HomeViewModel.swift in Sources */,
 				7070119B2E03BCD900134CC4 /* HomeRepository.swift in Sources */,
 				707011842E03B22500134CC4 /* ApiRedditPostChildren.swift in Sources */,
 				707011632E03926F00134CC4 /* AppCompositionRoot.swift in Sources */,

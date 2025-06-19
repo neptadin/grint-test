@@ -26,7 +26,10 @@ final class HomeCompositionRoot {
                     FetchPostsUseCase(repository: homeRepository, mapper: homeDomainMapper)
                 )
 
-                return HomeViewController(coder: coder, fetchPostsUseCase: fetchPostsUseCase)
+                // Presentation
+                let homeViewModel = HomeViewModel(fetchPostsUseCase: fetchPostsUseCase)
+
+                return HomeViewController(coder: coder, viewModel: homeViewModel)
             }
         ) as! HomeViewController
 
