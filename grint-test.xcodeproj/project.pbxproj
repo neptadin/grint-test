@@ -16,7 +16,11 @@
 		707011742E039B0F00134CC4 /* NetworkEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011732E039B0B00134CC4 /* NetworkEntities.swift */; };
 		707011762E039BCE00134CC4 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011752E039BCB00134CC4 /* NetworkConstants.swift */; };
 		707011782E039D7F00134CC4 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011772E039D7700134CC4 /* HTTPMethod.swift */; };
-		7070117D2E03A62600134CC4 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7070117C2E03A61E00134CC4 /* Entities.swift */; };
+		707011822E03B21A00134CC4 /* ApiRedditPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011812E03B21A00134CC4 /* ApiRedditPostResponse.swift */; };
+		707011842E03B22500134CC4 /* ApiRedditPostChildren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011832E03B22500134CC4 /* ApiRedditPostChildren.swift */; };
+		707011862E03B23200134CC4 /* ApiRedditPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011852E03B23200134CC4 /* ApiRedditPost.swift */; };
+		707011892E03B36400134CC4 /* HomeRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011882E03B35C00134CC4 /* HomeRemoteDataSource.swift */; };
+		7070118B2E03B41E00134CC4 /* HomeRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7070118A2E03B41800134CC4 /* HomeRemoteDataSourceImpl.swift */; };
 		7085B0E92E03849F000AE56C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0DC2E03849F000AE56C /* AppDelegate.swift */; };
 		7085B0EA2E03849F000AE56C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0DD2E03849F000AE56C /* SceneDelegate.swift */; };
 		7085B0EB2E03849F000AE56C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0E02E03849F000AE56C /* HomeViewController.swift */; };
@@ -61,7 +65,11 @@
 		707011732E039B0B00134CC4 /* NetworkEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEntities.swift; sourceTree = "<group>"; };
 		707011752E039BCB00134CC4 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		707011772E039D7700134CC4 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		7070117C2E03A61E00134CC4 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
+		707011812E03B21A00134CC4 /* ApiRedditPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRedditPostResponse.swift; sourceTree = "<group>"; };
+		707011832E03B22500134CC4 /* ApiRedditPostChildren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRedditPostChildren.swift; sourceTree = "<group>"; };
+		707011852E03B23200134CC4 /* ApiRedditPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRedditPost.swift; sourceTree = "<group>"; };
+		707011882E03B35C00134CC4 /* HomeRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemoteDataSource.swift; sourceTree = "<group>"; };
+		7070118A2E03B41800134CC4 /* HomeRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
 		7085B0DC2E03849F000AE56C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7085B0DD2E03849F000AE56C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7085B0DF2E03849F000AE56C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -167,9 +175,29 @@
 		7070117B2E03A61300134CC4 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				7070117C2E03A61E00134CC4 /* Entities.swift */,
+				707011872E03B34900134CC4 /* DataSource */,
+				7070117E2E03AFDF00134CC4 /* Entity */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		7070117E2E03AFDF00134CC4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				707011852E03B23200134CC4 /* ApiRedditPost.swift */,
+				707011832E03B22500134CC4 /* ApiRedditPostChildren.swift */,
+				707011812E03B21A00134CC4 /* ApiRedditPostResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		707011872E03B34900134CC4 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				707011882E03B35C00134CC4 /* HomeRemoteDataSource.swift */,
+				7070118A2E03B41800134CC4 /* HomeRemoteDataSourceImpl.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		7085B0E12E03849F000AE56C /* Home */ = {
@@ -204,9 +232,9 @@
 		7085B0E82E03849F000AE56C /* grint-test */ = {
 			isa = PBXGroup;
 			children = (
-				707011662E03943E00134CC4 /* Extensions */,
 				7085B0E22E03849F000AE56C /* Modules */,
 				7085B0E62E03849F000AE56C /* Resources */,
+				707011662E03943E00134CC4 /* Extensions */,
 				7085B0E72E03849F000AE56C /* Info.plist */,
 			);
 			path = "grint-test";
@@ -522,16 +550,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				707011682E03944800134CC4 /* Reusable.swift in Sources */,
+				707011842E03B22500134CC4 /* ApiRedditPostChildren.swift in Sources */,
 				707011632E03926F00134CC4 /* AppCompositionRoot.swift in Sources */,
 				707011762E039BCE00134CC4 /* NetworkConstants.swift in Sources */,
 				707011782E039D7F00134CC4 /* HTTPMethod.swift in Sources */,
 				707011712E039A1400134CC4 /* AlamofireManagerImpl.swift in Sources */,
 				707011652E0393B900134CC4 /* HomeCompositionRoot.swift in Sources */,
-				7070117D2E03A62600134CC4 /* Entities.swift in Sources */,
 				7070116F2E03981B00134CC4 /* NetworkManager.swift in Sources */,
+				707011862E03B23200134CC4 /* ApiRedditPost.swift in Sources */,
 				707011742E039B0F00134CC4 /* NetworkEntities.swift in Sources */,
 				7085B0E92E03849F000AE56C /* AppDelegate.swift in Sources */,
+				7070118B2E03B41E00134CC4 /* HomeRemoteDataSourceImpl.swift in Sources */,
+				707011822E03B21A00134CC4 /* ApiRedditPostResponse.swift in Sources */,
 				7085B0EA2E03849F000AE56C /* SceneDelegate.swift in Sources */,
+				707011892E03B36400134CC4 /* HomeRemoteDataSource.swift in Sources */,
 				7085B0EB2E03849F000AE56C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

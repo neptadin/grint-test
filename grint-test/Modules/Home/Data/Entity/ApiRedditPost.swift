@@ -1,19 +1,9 @@
 //
-//  Entities.swift
+//  ApiRedditPost.swift
 //  grint-test
 //
 //  Created by Neptali Duque on 6/18/25.
 //
-
-struct ApiRedditPostResponse: Decodable {
-    let after: String?
-    let before: String?
-    let children: [ApiRedditPostChildren]
-}
-
-struct ApiRedditPostChildren: Decodable {
-    let data: ApiRedditPost
-}
 
 struct ApiRedditPost: Decodable {
     let title: String

@@ -10,5 +10,5 @@ protocol NetworkManager {
         path: String,
         method: HTTPMethod,
         queryParameters: [String: String]
-    ) async throws -> Result<R, Error>
+    ) async -> Result<R, Error>
 }

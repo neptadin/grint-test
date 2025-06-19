@@ -8,16 +8,12 @@
 import UIKit
 
 final class HomeCompositionRoot {
-    private enum Constants {
-        static let homeIdentifier = HomeViewController.identifier
-    }
-
     static func makeHomeViewController() -> HomeViewController {
-        let storyboard = UIStoryboard(name: "Home", bundle: .main)
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
 
         guard
             let homeViewController = storyboard.instantiateViewController(
-                identifier: Constants.homeIdentifier) as? HomeViewController
+                identifier: HomeViewController.identifier) as? HomeViewController
         else {
             fatalError("HomeViewController not found")
         }

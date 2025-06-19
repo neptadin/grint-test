@@ -10,6 +10,6 @@ enum NetworkConstants {
 
     enum Top {
         private static let basePath = "/top"
-        static let top = "\(basePath)/.json"
+        static let topPosts = "\(basePath)/.json"
     }
 }

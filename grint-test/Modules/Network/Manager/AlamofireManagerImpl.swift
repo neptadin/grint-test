@@ -23,9 +23,9 @@ final class AlamofireManagerImpl: NetworkManager {
         path: String,
         method: HTTPMethod,
         queryParameters: [String: String]
-    ) async throws -> Result<R, Error> {
+    ) async -> Result<R, Error> {
         let endpoint = createUrlWithQueryItems(endpoint: baseURL + path, queryParams: queryParameters)
-        return try await withCheckedThrowingContinuation { continuation in
+        return await withCheckedContinuation { continuation in
             session.request(
                 endpoint,
                 method: method.alamofireHttpMethod

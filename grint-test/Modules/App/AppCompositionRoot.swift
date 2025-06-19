@@ -7,6 +7,7 @@
 
 import UIKit
 
+@MainActor
 final class AppCompositionRoot {
     static func configureApp(window: UIWindow) {
         let homeViewController = HomeCompositionRoot.makeHomeViewController()
