@@ -29,6 +29,11 @@
 		7070119D2E03BD1600134CC4 /* HomeDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7070119C2E03BD0F00134CC4 /* HomeDataMapper.swift */; };
 		7070119F2E03BD1D00134CC4 /* HomeDataMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7070119E2E03BD1A00134CC4 /* HomeDataMapperImpl.swift */; };
 		707011A12E03BE5200134CC4 /* RedditPostsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011A02E03BE4C00134CC4 /* RedditPostsEntry.swift */; };
+		707011A52E03C47A00134CC4 /* HomeDomainMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011A42E03C47400134CC4 /* HomeDomainMapper.swift */; };
+		707011A82E03C4C400134CC4 /* UiRedditPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011A72E03C4C400134CC4 /* UiRedditPost.swift */; };
+		707011AC2E03C6F900134CC4 /* UiRedditPostsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011AB2E03C6F900134CC4 /* UiRedditPostsEntry.swift */; };
+		707011AE2E03C8FC00134CC4 /* HomeDomainMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011AD2E03C8F700134CC4 /* HomeDomainMapperImpl.swift */; };
+		707011B22E03D1D600134CC4 /* FetchPostsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011B12E03D1CB00134CC4 /* FetchPostsUseCase.swift */; };
 		7085B0E92E03849F000AE56C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0DC2E03849F000AE56C /* AppDelegate.swift */; };
 		7085B0EA2E03849F000AE56C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0DD2E03849F000AE56C /* SceneDelegate.swift */; };
 		7085B0EB2E03849F000AE56C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0E02E03849F000AE56C /* HomeViewController.swift */; };
@@ -86,6 +91,11 @@
 		7070119C2E03BD0F00134CC4 /* HomeDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataMapper.swift; sourceTree = "<group>"; };
 		7070119E2E03BD1A00134CC4 /* HomeDataMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataMapperImpl.swift; sourceTree = "<group>"; };
 		707011A02E03BE4C00134CC4 /* RedditPostsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditPostsEntry.swift; sourceTree = "<group>"; };
+		707011A42E03C47400134CC4 /* HomeDomainMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDomainMapper.swift; sourceTree = "<group>"; };
+		707011A72E03C4C400134CC4 /* UiRedditPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiRedditPost.swift; sourceTree = "<group>"; };
+		707011AB2E03C6F900134CC4 /* UiRedditPostsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiRedditPostsEntry.swift; sourceTree = "<group>"; };
+		707011AD2E03C8F700134CC4 /* HomeDomainMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDomainMapperImpl.swift; sourceTree = "<group>"; };
+		707011B12E03D1CB00134CC4 /* FetchPostsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPostsUseCase.swift; sourceTree = "<group>"; };
 		7085B0DC2E03849F000AE56C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7085B0DD2E03849F000AE56C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7085B0DF2E03849F000AE56C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -162,6 +172,7 @@
 		7070116C2E03972E00134CC4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				707011A62E03C4AD00134CC4 /* Entity */,
 				7085B0E02E03849F000AE56C /* HomeViewController.swift */,
 				7085B0DF2E03849F000AE56C /* Home.storyboard */,
 			);
@@ -238,6 +249,8 @@
 		707011922E03BC6400134CC4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				707011A22E03C45C00134CC4 /* Mapper */,
+				707011A32E03C46600134CC4 /* UseCase */,
 				707011932E03BC7700134CC4 /* Entity */,
 			);
 			path = Domain;
@@ -268,6 +281,32 @@
 				7070119E2E03BD1A00134CC4 /* HomeDataMapperImpl.swift */,
 			);
 			path = Mapper;
+			sourceTree = "<group>";
+		};
+		707011A22E03C45C00134CC4 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				707011A42E03C47400134CC4 /* HomeDomainMapper.swift */,
+				707011AD2E03C8F700134CC4 /* HomeDomainMapperImpl.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		707011A32E03C46600134CC4 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				707011B12E03D1CB00134CC4 /* FetchPostsUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		707011A62E03C4AD00134CC4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				707011AB2E03C6F900134CC4 /* UiRedditPostsEntry.swift */,
+				707011A72E03C4C400134CC4 /* UiRedditPost.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		7085B0E12E03849F000AE56C /* Home */ = {
@@ -621,16 +660,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				707011AC2E03C6F900134CC4 /* UiRedditPostsEntry.swift in Sources */,
 				707011682E03944800134CC4 /* Reusable.swift in Sources */,
 				7070119B2E03BCD900134CC4 /* HomeRepository.swift in Sources */,
 				707011842E03B22500134CC4 /* ApiRedditPostChildren.swift in Sources */,
 				707011632E03926F00134CC4 /* AppCompositionRoot.swift in Sources */,
 				707011762E039BCE00134CC4 /* NetworkConstants.swift in Sources */,
+				707011A52E03C47A00134CC4 /* HomeDomainMapper.swift in Sources */,
 				7070118F2E03BA4900134CC4 /* AsyncUseCase.swift in Sources */,
 				707011782E039D7F00134CC4 /* HTTPMethod.swift in Sources */,
 				707011712E039A1400134CC4 /* AlamofireManagerImpl.swift in Sources */,
 				707011652E0393B900134CC4 /* HomeCompositionRoot.swift in Sources */,
 				7070116F2E03981B00134CC4 /* NetworkManager.swift in Sources */,
+				707011A82E03C4C400134CC4 /* UiRedditPost.swift in Sources */,
 				707011A12E03BE5200134CC4 /* RedditPostsEntry.swift in Sources */,
 				707011862E03B23200134CC4 /* ApiRedditPost.swift in Sources */,
 				707011742E039B0F00134CC4 /* NetworkEntities.swift in Sources */,
@@ -639,9 +681,11 @@
 				707011822E03B21A00134CC4 /* ApiRedditPostResponse.swift in Sources */,
 				707011912E03BAB700134CC4 /* SyncUseCase.swift in Sources */,
 				707011992E03BCD100134CC4 /* HomeDataSource.swift in Sources */,
+				707011AE2E03C8FC00134CC4 /* HomeDomainMapperImpl.swift in Sources */,
 				707011952E03BC8900134CC4 /* RedditPost.swift in Sources */,
 				7085B0EA2E03849F000AE56C /* SceneDelegate.swift in Sources */,
 				7070119D2E03BD1600134CC4 /* HomeDataMapper.swift in Sources */,
+				707011B22E03D1D600134CC4 /* FetchPostsUseCase.swift in Sources */,
 				7070119F2E03BD1D00134CC4 /* HomeDataMapperImpl.swift in Sources */,
 				707011892E03B36400134CC4 /* HomeRemoteDataSource.swift in Sources */,
 				7085B0EB2E03849F000AE56C /* HomeViewController.swift in Sources */,

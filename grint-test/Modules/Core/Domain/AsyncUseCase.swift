@@ -10,5 +10,5 @@ protocol AsyncUseCase {
     associatedtype Output
     associatedtype Error: Swift.Error
 
-    func execute(_ input: Input) async -> Result<Output, Error>
+    func execute(_ input: Input, _ onCompletion: @escaping (Result<Output, Error>) -> Void)
 }
