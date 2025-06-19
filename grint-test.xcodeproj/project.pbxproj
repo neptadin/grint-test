@@ -273,10 +273,10 @@
 		7085B0E12E03849F000AE56C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				7070116B2E03971C00134CC4 /* DI */,
 				7070117B2E03A61300134CC4 /* Data */,
 				707011922E03BC6400134CC4 /* Domain */,
 				7070116C2E03972E00134CC4 /* Presentation */,
+				7070116B2E03971C00134CC4 /* DI */,
 			);
 			path = Home;
 			sourceTree = "<group>";
