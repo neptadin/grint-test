@@ -7,6 +7,5 @@
 
 struct ApiRedditPostResponse: Decodable {
     let after: String?
-    let before: String?
     let children: [ApiRedditPostChildren]
 }
