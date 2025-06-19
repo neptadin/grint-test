@@ -6,11 +6,10 @@
 //
 
 import UIKit
+import Alamofire
 
 final class HomeViewController: UITableViewController, Reusable {
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
 }

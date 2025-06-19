@@ -11,6 +11,12 @@
 		707011632E03926F00134CC4 /* AppCompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011622E03926800134CC4 /* AppCompositionRoot.swift */; };
 		707011652E0393B900134CC4 /* HomeCompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011642E0393B300134CC4 /* HomeCompositionRoot.swift */; };
 		707011682E03944800134CC4 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011672E03944500134CC4 /* Reusable.swift */; };
+		7070116F2E03981B00134CC4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7070116E2E03981500134CC4 /* NetworkManager.swift */; };
+		707011712E039A1400134CC4 /* AlamofireManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011702E039A0C00134CC4 /* AlamofireManagerImpl.swift */; };
+		707011742E039B0F00134CC4 /* NetworkEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011732E039B0B00134CC4 /* NetworkEntities.swift */; };
+		707011762E039BCE00134CC4 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011752E039BCB00134CC4 /* NetworkConstants.swift */; };
+		707011782E039D7F00134CC4 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011772E039D7700134CC4 /* HTTPMethod.swift */; };
+		7070117D2E03A62600134CC4 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7070117C2E03A61E00134CC4 /* Entities.swift */; };
 		7085B0E92E03849F000AE56C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0DC2E03849F000AE56C /* AppDelegate.swift */; };
 		7085B0EA2E03849F000AE56C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0DD2E03849F000AE56C /* SceneDelegate.swift */; };
 		7085B0EB2E03849F000AE56C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0E02E03849F000AE56C /* HomeViewController.swift */; };
@@ -50,6 +56,12 @@
 		707011622E03926800134CC4 /* AppCompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCompositionRoot.swift; sourceTree = "<group>"; };
 		707011642E0393B300134CC4 /* HomeCompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCompositionRoot.swift; sourceTree = "<group>"; };
 		707011672E03944500134CC4 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		7070116E2E03981500134CC4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		707011702E039A0C00134CC4 /* AlamofireManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManagerImpl.swift; sourceTree = "<group>"; };
+		707011732E039B0B00134CC4 /* NetworkEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEntities.swift; sourceTree = "<group>"; };
+		707011752E039BCB00134CC4 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		707011772E039D7700134CC4 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		7070117C2E03A61E00134CC4 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		7085B0DC2E03849F000AE56C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7085B0DD2E03849F000AE56C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7085B0DF2E03849F000AE56C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -115,12 +127,57 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		7070116B2E03971C00134CC4 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				707011642E0393B300134CC4 /* HomeCompositionRoot.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		7070116C2E03972E00134CC4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7085B0E02E03849F000AE56C /* HomeViewController.swift */,
+				7085B0DF2E03849F000AE56C /* Home.storyboard */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7070116D2E0397F500134CC4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				707011722E039AD100134CC4 /* Manager */,
+				707011752E039BCB00134CC4 /* NetworkConstants.swift */,
+				707011772E039D7700134CC4 /* HTTPMethod.swift */,
+				707011732E039B0B00134CC4 /* NetworkEntities.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		707011722E039AD100134CC4 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				7070116E2E03981500134CC4 /* NetworkManager.swift */,
+				707011702E039A0C00134CC4 /* AlamofireManagerImpl.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		7070117B2E03A61300134CC4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7070117C2E03A61E00134CC4 /* Entities.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		7085B0E12E03849F000AE56C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				7085B0DF2E03849F000AE56C /* Home.storyboard */,
-				7085B0E02E03849F000AE56C /* HomeViewController.swift */,
-				707011642E0393B300134CC4 /* HomeCompositionRoot.swift */,
+				7070116B2E03971C00134CC4 /* DI */,
+				7070117B2E03A61300134CC4 /* Data */,
+				7070116C2E03972E00134CC4 /* Presentation */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -130,6 +187,7 @@
 			children = (
 				707011612E03924B00134CC4 /* App */,
 				7085B0E12E03849F000AE56C /* Home */,
+				7070116D2E0397F500134CC4 /* Network */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -465,7 +523,13 @@
 			files = (
 				707011682E03944800134CC4 /* Reusable.swift in Sources */,
 				707011632E03926F00134CC4 /* AppCompositionRoot.swift in Sources */,
+				707011762E039BCE00134CC4 /* NetworkConstants.swift in Sources */,
+				707011782E039D7F00134CC4 /* HTTPMethod.swift in Sources */,
+				707011712E039A1400134CC4 /* AlamofireManagerImpl.swift in Sources */,
 				707011652E0393B900134CC4 /* HomeCompositionRoot.swift in Sources */,
+				7070117D2E03A62600134CC4 /* Entities.swift in Sources */,
+				7070116F2E03981B00134CC4 /* NetworkManager.swift in Sources */,
+				707011742E039B0F00134CC4 /* NetworkEntities.swift in Sources */,
 				7085B0E92E03849F000AE56C /* AppDelegate.swift in Sources */,
 				7085B0EA2E03849F000AE56C /* SceneDelegate.swift in Sources */,
 				7085B0EB2E03849F000AE56C /* HomeViewController.swift in Sources */,
