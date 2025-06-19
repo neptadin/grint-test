@@ -35,4 +35,10 @@ final class HomeCompositionRoot {
 
         return homeViewController
     }
+
+    private static func adaptPostsToCellControllers(forwardingTo controller: HomeViewController) -> ([UiRedditPost]) -> Void {
+        return { [weak controller] feed in
+
+        }
+    }
 }

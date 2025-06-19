@@ -5,6 +5,8 @@
 //  Created by Neptali Duque on 6/18/25.
 //
 
+import Foundation
+
 struct RedditPost {
     let title: String
     let author: String
@@ -14,4 +16,5 @@ struct RedditPost {
     let numComments: Int
     let subreddit: String
     let detailLink: String
+    let size: CGSize?
 }

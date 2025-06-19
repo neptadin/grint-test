@@ -46,6 +46,10 @@
 		70AB29352E045F8F001B7894 /* AnyAsyncUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29342E045F89001B7894 /* AnyAsyncUseCase.swift */; };
 		70AB29372E0465D1001B7894 /* AnySyncUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29362E0465CA001B7894 /* AnySyncUseCase.swift */; };
 		70AB293D2E046B42001B7894 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB293C2E046B3F001B7894 /* HomeViewModel.swift */; };
+		70AB29402E047895001B7894 /* HomePostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70AB293F2E047895001B7894 /* HomePostCell.xib */; };
+		70AB29422E047929001B7894 /* HomePostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29412E047925001B7894 /* HomePostController.swift */; };
+		70AB29452E047944001B7894 /* HomePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29442E047941001B7894 /* HomePostCell.swift */; };
+		70AB29472E04865D001B7894 /* HomePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29462E048659001B7894 /* HomePostViewModel.swift */; };
 		BEED65CCA2E433617FEB8460 /* Pods_grint_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF5967524A9E72EB467B4E1 /* Pods_grint_testTests.framework */; };
 		F970F673A09FF8FD76ED9D8A /* Pods_grint_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98CEA2A7227847BCF5FCFC6E /* Pods_grint_test.framework */; };
 /* End PBXBuildFile section */
@@ -112,6 +116,10 @@
 		70AB29342E045F89001B7894 /* AnyAsyncUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyAsyncUseCase.swift; sourceTree = "<group>"; };
 		70AB29362E0465CA001B7894 /* AnySyncUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnySyncUseCase.swift; sourceTree = "<group>"; };
 		70AB293C2E046B3F001B7894 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		70AB293F2E047895001B7894 /* HomePostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePostCell.xib; sourceTree = "<group>"; };
+		70AB29412E047925001B7894 /* HomePostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePostController.swift; sourceTree = "<group>"; };
+		70AB29442E047941001B7894 /* HomePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePostCell.swift; sourceTree = "<group>"; };
+		70AB29462E048659001B7894 /* HomePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePostViewModel.swift; sourceTree = "<group>"; };
 		70DFF1B42E034871004F4EFF /* grint-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "grint-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF1CA2E034872004F4EFF /* grint-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grint-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF1D42E034872004F4EFF /* grint-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grint-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -396,6 +404,7 @@
 		70AB293A2E046986001B7894 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				70AB29412E047925001B7894 /* HomePostController.swift */,
 				7085B0E02E03849F000AE56C /* HomeViewController.swift */,
 			);
 			path = Controllers;
@@ -404,6 +413,7 @@
 		70AB293B2E046A5D001B7894 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				70AB29462E048659001B7894 /* HomePostViewModel.swift */,
 				70AB293C2E046B3F001B7894 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
@@ -412,9 +422,19 @@
 		70AB293E2E046E90001B7894 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				70AB29432E047935001B7894 /* Cells */,
 				7085B0DF2E03849F000AE56C /* Home.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		70AB29432E047935001B7894 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				70AB29442E047941001B7894 /* HomePostCell.swift */,
+				70AB293F2E047895001B7894 /* HomePostCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		70DFF1AB2E034871004F4EFF = {
@@ -571,6 +591,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70AB29402E047895001B7894 /* HomePostCell.xib in Resources */,
 				7085B0EC2E03849F000AE56C /* Home.storyboard in Resources */,
 				7085B0ED2E03849F000AE56C /* Assets.xcassets in Resources */,
 				7085B0EE2E03849F000AE56C /* LaunchScreen.storyboard in Resources */,
@@ -725,10 +746,13 @@
 				7070116F2E03981B00134CC4 /* NetworkManager.swift in Sources */,
 				707011A82E03C4C400134CC4 /* UiRedditPost.swift in Sources */,
 				707011A12E03BE5200134CC4 /* RedditPostsEntry.swift in Sources */,
+				70AB29422E047929001B7894 /* HomePostController.swift in Sources */,
 				707011862E03B23200134CC4 /* ApiRedditPost.swift in Sources */,
+				70AB29452E047944001B7894 /* HomePostCell.swift in Sources */,
 				707011742E039B0F00134CC4 /* NetworkEntities.swift in Sources */,
 				7085B0E92E03849F000AE56C /* AppDelegate.swift in Sources */,
 				7070118B2E03B41E00134CC4 /* HomeRemoteDataSourceImpl.swift in Sources */,
+				70AB29472E04865D001B7894 /* HomePostViewModel.swift in Sources */,
 				707011822E03B21A00134CC4 /* ApiRedditPostResponse.swift in Sources */,
 				707011912E03BAB700134CC4 /* SyncUseCase.swift in Sources */,
 				707011992E03BCD100134CC4 /* HomeDataSource.swift in Sources */,

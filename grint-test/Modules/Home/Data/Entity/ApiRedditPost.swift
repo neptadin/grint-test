@@ -14,6 +14,7 @@ struct ApiRedditPost: Decodable {
     let numComments: Int
     let subreddit: String
     let detailLink: String
+    let preview: ApiRedditPostPreview?
 
     enum CodingKeys: String, CodingKey {
         case title
@@ -24,5 +25,19 @@ struct ApiRedditPost: Decodable {
         case numComments = "num_comments"
         case subreddit = "subreddit_name_prefixed"
         case detailLink = "permalink"
+        case preview
     }
+}
+
+struct ApiRedditPostPreview: Decodable {
+    let images: [ApiRedditPostSourceImage]
+}
+
+struct ApiRedditPostSourceImage: Decodable {
+    let source: ApiRedditPostImageSize?
+}
+
+struct ApiRedditPostImageSize: Decodable {
+    let width: Int?
+    let height: Int?
 }

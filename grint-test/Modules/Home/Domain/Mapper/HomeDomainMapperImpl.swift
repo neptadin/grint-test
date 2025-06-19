@@ -21,7 +21,8 @@ struct HomeDomainMapperImpl: HomeDomainMapper {
                 ups: $0.ups,
                 numComments: $0.numComments,
                 subreddit: $0.subreddit,
-                detailLink: $0.detailLink
+                detailLink: $0.detailLink,
+                size: $0.size
             )
         }
 
