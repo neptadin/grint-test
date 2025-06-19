@@ -8,7 +8,6 @@
 protocol AsyncUseCase {
     associatedtype Input
     associatedtype Output
-    associatedtype Error: Swift.Error
 
     func execute(_ input: Input, _ onCompletion: @escaping (Result<Output, Error>) -> Void)
 }

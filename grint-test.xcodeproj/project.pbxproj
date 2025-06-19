@@ -43,6 +43,8 @@
 		7085B0F22E0384B6000AE56C /* grint_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0F02E0384B6000AE56C /* grint_testTests.swift */; };
 		7085B0F62E0384BF000AE56C /* grint_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0F32E0384BF000AE56C /* grint_testUITests.swift */; };
 		7085B0F72E0384BF000AE56C /* grint_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0F42E0384BF000AE56C /* grint_testUITestsLaunchTests.swift */; };
+		70AB29352E045F8F001B7894 /* AnyAsyncUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29342E045F89001B7894 /* AnyAsyncUseCase.swift */; };
+		70AB29372E0465D1001B7894 /* AnySyncUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29362E0465CA001B7894 /* AnySyncUseCase.swift */; };
 		BEED65CCA2E433617FEB8460 /* Pods_grint_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF5967524A9E72EB467B4E1 /* Pods_grint_testTests.framework */; };
 		F970F673A09FF8FD76ED9D8A /* Pods_grint_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98CEA2A7227847BCF5FCFC6E /* Pods_grint_test.framework */; };
 /* End PBXBuildFile section */
@@ -106,6 +108,8 @@
 		7085B0F02E0384B6000AE56C /* grint_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grint_testTests.swift; sourceTree = "<group>"; };
 		7085B0F32E0384BF000AE56C /* grint_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grint_testUITests.swift; sourceTree = "<group>"; };
 		7085B0F42E0384BF000AE56C /* grint_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grint_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		70AB29342E045F89001B7894 /* AnyAsyncUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyAsyncUseCase.swift; sourceTree = "<group>"; };
+		70AB29362E0465CA001B7894 /* AnySyncUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnySyncUseCase.swift; sourceTree = "<group>"; };
 		70DFF1B42E034871004F4EFF /* grint-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "grint-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF1CA2E034872004F4EFF /* grint-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grint-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF1D42E034872004F4EFF /* grint-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grint-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,8 +150,8 @@
 		707011612E03924B00134CC4 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				70AB29332E0448EF001B7894 /* DI */,
 				7085B0DC2E03849F000AE56C /* AppDelegate.swift */,
-				707011622E03926800134CC4 /* AppCompositionRoot.swift */,
 				7085B0DD2E03849F000AE56C /* SceneDelegate.swift */,
 			);
 			path = App;
@@ -172,9 +176,8 @@
 		7070116C2E03972E00134CC4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				70AB293A2E046986001B7894 /* View */,
 				707011A62E03C4AD00134CC4 /* Entity */,
-				7085B0E02E03849F000AE56C /* HomeViewController.swift */,
-				7085B0DF2E03849F000AE56C /* Home.storyboard */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -240,8 +243,7 @@
 		7070118D2E03BA3C00134CC4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				7070118E2E03BA4500134CC4 /* AsyncUseCase.swift */,
-				707011902E03BAB400134CC4 /* SyncUseCase.swift */,
+				707011B62E0446C800134CC4 /* UseCase */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -309,6 +311,17 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		707011B62E0446C800134CC4 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				7070118E2E03BA4500134CC4 /* AsyncUseCase.swift */,
+				70AB29342E045F89001B7894 /* AnyAsyncUseCase.swift */,
+				707011902E03BAB400134CC4 /* SyncUseCase.swift */,
+				70AB29362E0465CA001B7894 /* AnySyncUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		7085B0E12E03849F000AE56C /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +379,23 @@
 				7085B0F42E0384BF000AE56C /* grint_testUITestsLaunchTests.swift */,
 			);
 			path = "grint-testUITests";
+			sourceTree = "<group>";
+		};
+		70AB29332E0448EF001B7894 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				707011622E03926800134CC4 /* AppCompositionRoot.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		70AB293A2E046986001B7894 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7085B0E02E03849F000AE56C /* HomeViewController.swift */,
+				7085B0DF2E03849F000AE56C /* Home.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		70DFF1AB2E034871004F4EFF = {
@@ -662,6 +692,7 @@
 			files = (
 				707011AC2E03C6F900134CC4 /* UiRedditPostsEntry.swift in Sources */,
 				707011682E03944800134CC4 /* Reusable.swift in Sources */,
+				70AB29352E045F8F001B7894 /* AnyAsyncUseCase.swift in Sources */,
 				7070119B2E03BCD900134CC4 /* HomeRepository.swift in Sources */,
 				707011842E03B22500134CC4 /* ApiRedditPostChildren.swift in Sources */,
 				707011632E03926F00134CC4 /* AppCompositionRoot.swift in Sources */,
@@ -688,6 +719,7 @@
 				707011B22E03D1D600134CC4 /* FetchPostsUseCase.swift in Sources */,
 				7070119F2E03BD1D00134CC4 /* HomeDataMapperImpl.swift in Sources */,
 				707011892E03B36400134CC4 /* HomeRemoteDataSource.swift in Sources */,
+				70AB29372E0465D1001B7894 /* AnySyncUseCase.swift in Sources */,
 				7085B0EB2E03849F000AE56C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

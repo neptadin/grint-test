@@ -8,7 +8,7 @@
 final class FetchPostsUseCase: AsyncUseCase {
     typealias Input = String?
     typealias Output = UiRedditPostsEntry
-    typealias Error = Swift.Error
+    typealias Alias = AnyAsyncUseCase<Input, Output>
 
     private let repository: HomeDataSource
     private let mapper: HomeDomainMapper
@@ -21,7 +21,6 @@ final class FetchPostsUseCase: AsyncUseCase {
     func execute(_ input: Input, _ onCompletion: @escaping (Result<Output, Error>) -> Void) {
         Task {
             let domainPosts = await repository.fetchPosts(page: input)
-
             let presentationPosts = domainPosts.map { [mapper] result in
                 mapper.domainToPresentation(result)
             }
