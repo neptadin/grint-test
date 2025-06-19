@@ -28,17 +28,30 @@ final class HomeCompositionRoot {
 
                 // Presentation
                 let homeViewModel = HomeViewModel(fetchPostsUseCase: fetchPostsUseCase)
-
                 return HomeViewController(coder: coder, viewModel: homeViewModel)
             }
         ) as! HomeViewController
+
+        homeViewController.viewModel.onPostsLoaded = adaptPostsToCellControllers(forwardingTo: homeViewController)
 
         return homeViewController
     }
 
     private static func adaptPostsToCellControllers(forwardingTo controller: HomeViewController) -> ([UiRedditPost]) -> Void {
-        return { [weak controller] feed in
-
+        return { [weak controller] posts in
+            controller?.tableModel = (controller?.tableModel ?? []) + posts.map {
+                HomePostController(
+                    viewModel: .init(
+                        model: $0,
+                        onCellTap: { detailLink in
+                            debugPrint(detailLink)
+                        },
+                        onPostLinkTap: { postLink in
+                            debugPrint(postLink)
+                        }
+                    )
+                )
+            }
         }
     }
 }

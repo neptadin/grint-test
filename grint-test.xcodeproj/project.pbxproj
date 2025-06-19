@@ -50,6 +50,11 @@
 		70AB29422E047929001B7894 /* HomePostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29412E047925001B7894 /* HomePostController.swift */; };
 		70AB29452E047944001B7894 /* HomePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29442E047941001B7894 /* HomePostCell.swift */; };
 		70AB29472E04865D001B7894 /* HomePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29462E048659001B7894 /* HomePostViewModel.swift */; };
+		70AB29492E04ACBF001B7894 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29482E04ACB6001B7894 /* UIImageView.swift */; };
+		70AB294B2E04AD69001B7894 /* Resizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB294A2E04AD63001B7894 /* Resizable.swift */; };
+		70AB294D2E04B1E1001B7894 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB294C2E04B1D9001B7894 /* NSMutableAttributedString.swift */; };
+		70AB294F2E04B25B001B7894 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB294E2E04B259001B7894 /* UIButton.swift */; };
+		70AB29512E04D56F001B7894 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29502E04D56B001B7894 /* UITableView.swift */; };
 		BEED65CCA2E433617FEB8460 /* Pods_grint_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF5967524A9E72EB467B4E1 /* Pods_grint_testTests.framework */; };
 		F970F673A09FF8FD76ED9D8A /* Pods_grint_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98CEA2A7227847BCF5FCFC6E /* Pods_grint_test.framework */; };
 /* End PBXBuildFile section */
@@ -120,6 +125,11 @@
 		70AB29412E047925001B7894 /* HomePostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePostController.swift; sourceTree = "<group>"; };
 		70AB29442E047941001B7894 /* HomePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePostCell.swift; sourceTree = "<group>"; };
 		70AB29462E048659001B7894 /* HomePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePostViewModel.swift; sourceTree = "<group>"; };
+		70AB29482E04ACB6001B7894 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		70AB294A2E04AD63001B7894 /* Resizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resizable.swift; sourceTree = "<group>"; };
+		70AB294C2E04B1D9001B7894 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
+		70AB294E2E04B259001B7894 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		70AB29502E04D56B001B7894 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		70DFF1B42E034871004F4EFF /* grint-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "grint-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF1CA2E034872004F4EFF /* grint-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grint-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF1D42E034872004F4EFF /* grint-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grint-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +180,11 @@
 		707011662E03943E00134CC4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				70AB29502E04D56B001B7894 /* UITableView.swift */,
+				70AB294E2E04B259001B7894 /* UIButton.swift */,
+				70AB294C2E04B1D9001B7894 /* NSMutableAttributedString.swift */,
+				70AB294A2E04AD63001B7894 /* Resizable.swift */,
+				70AB29482E04ACB6001B7894 /* UIImageView.swift */,
 				707011672E03944500134CC4 /* Reusable.swift */,
 			);
 			path = Extensions;
@@ -731,6 +746,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				707011AC2E03C6F900134CC4 /* UiRedditPostsEntry.swift in Sources */,
+				70AB294B2E04AD69001B7894 /* Resizable.swift in Sources */,
 				707011682E03944800134CC4 /* Reusable.swift in Sources */,
 				70AB29352E045F8F001B7894 /* AnyAsyncUseCase.swift in Sources */,
 				70AB293D2E046B42001B7894 /* HomeViewModel.swift in Sources */,
@@ -743,6 +759,7 @@
 				707011782E039D7F00134CC4 /* HTTPMethod.swift in Sources */,
 				707011712E039A1400134CC4 /* AlamofireManagerImpl.swift in Sources */,
 				707011652E0393B900134CC4 /* HomeCompositionRoot.swift in Sources */,
+				70AB294F2E04B25B001B7894 /* UIButton.swift in Sources */,
 				7070116F2E03981B00134CC4 /* NetworkManager.swift in Sources */,
 				707011A82E03C4C400134CC4 /* UiRedditPost.swift in Sources */,
 				707011A12E03BE5200134CC4 /* RedditPostsEntry.swift in Sources */,
@@ -758,11 +775,14 @@
 				707011992E03BCD100134CC4 /* HomeDataSource.swift in Sources */,
 				707011AE2E03C8FC00134CC4 /* HomeDomainMapperImpl.swift in Sources */,
 				707011952E03BC8900134CC4 /* RedditPost.swift in Sources */,
+				70AB29492E04ACBF001B7894 /* UIImageView.swift in Sources */,
 				7085B0EA2E03849F000AE56C /* SceneDelegate.swift in Sources */,
 				7070119D2E03BD1600134CC4 /* HomeDataMapper.swift in Sources */,
+				70AB294D2E04B1E1001B7894 /* NSMutableAttributedString.swift in Sources */,
 				707011B22E03D1D600134CC4 /* FetchPostsUseCase.swift in Sources */,
 				7070119F2E03BD1D00134CC4 /* HomeDataMapperImpl.swift in Sources */,
 				707011892E03B36400134CC4 /* HomeRemoteDataSource.swift in Sources */,
+				70AB29512E04D56F001B7894 /* UITableView.swift in Sources */,
 				70AB29372E0465D1001B7894 /* AnySyncUseCase.swift in Sources */,
 				7085B0EB2E03849F000AE56C /* HomeViewController.swift in Sources */,
 			);

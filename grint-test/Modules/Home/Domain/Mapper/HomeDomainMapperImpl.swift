@@ -7,21 +7,21 @@
 
 struct HomeDomainMapperImpl: HomeDomainMapper {
     private enum Constants {
-        static let thumbnailUrlCheck = "i.redd.it"
+        static let amp = "amp;"
     }
 
     func domainToPresentation(_ value: RedditPostsEntry) -> UiRedditPostsEntry {
         let posts = value.posts.map {
-            UiRedditPost(
+            let cleansedThumbnail = $0.thumbnail?.replacingOccurrences(of: Constants.amp, with: "")
+            return UiRedditPost(
                 title: $0.title,
                 author: $0.author,
                 created: $0.created,
-                urlIsThumbnailPreview: $0.url.contains(Constants.thumbnailUrlCheck),
-                url: $0.url,
                 ups: $0.ups,
                 numComments: $0.numComments,
                 subreddit: $0.subreddit,
                 detailLink: $0.detailLink,
+                thumbnail: cleansedThumbnail,
                 size: $0.size
             )
         }

@@ -9,7 +9,6 @@ struct ApiRedditPost: Decodable {
     let title: String
     let author: String
     let created: Int
-    let url: String
     let ups: Int
     let numComments: Int
     let subreddit: String
@@ -20,7 +19,6 @@ struct ApiRedditPost: Decodable {
         case title
         case author
         case created
-        case url
         case ups
         case numComments = "num_comments"
         case subreddit = "subreddit_name_prefixed"
@@ -38,6 +36,7 @@ struct ApiRedditPostSourceImage: Decodable {
 }
 
 struct ApiRedditPostImageSize: Decodable {
+    let url: String?
     let width: Int?
     let height: Int?
 }

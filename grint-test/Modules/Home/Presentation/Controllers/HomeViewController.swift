@@ -10,10 +10,14 @@ import Alamofire
 
 final class HomeViewController: UIViewController, Reusable {
 
-    @IBOutlet private var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet private var tableView: UITableView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var tableView: UITableView!
 
-    private var viewModel: HomeViewModel
+    var tableModel = [HomePostController]() {
+        didSet { tableView.reloadData() }
+    }
+
+    var viewModel: HomeViewModel
 
     init?(coder: NSCoder, viewModel: HomeViewModel) {
         self.viewModel = viewModel
@@ -38,7 +42,9 @@ final class HomeViewController: UIViewController, Reusable {
 private extension HomeViewController {
     func setupUI() {
         view.backgroundColor = .black
+
         tableView.backgroundColor = .clear
+        tableView.registerNib(for: HomePostCell.self)
     }
 
     func bind() {
@@ -54,13 +60,17 @@ private extension HomeViewController {
     }
 }
 
-// MARK: - Table View Data Source
-extension HomeViewController: UITableViewDataSource {
+// MARK: - Table View
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        .zero
+        tableModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        .init()
+        cellController(for: indexPath).view(in: tableView)
+    }
+
+    private func cellController(for indexPath: IndexPath) -> HomePostController {
+        tableModel[indexPath.row]
     }
 }

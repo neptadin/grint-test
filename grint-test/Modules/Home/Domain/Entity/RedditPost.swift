@@ -11,10 +11,10 @@ struct RedditPost {
     let title: String
     let author: String
     let created: Int
-    let url: String
     let ups: Int
     let numComments: Int
     let subreddit: String
     let detailLink: String
+    let thumbnail: String?
     let size: CGSize?
 }

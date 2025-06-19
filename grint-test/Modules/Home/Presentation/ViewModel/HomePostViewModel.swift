@@ -9,9 +9,17 @@ import Foundation
 
 final class HomePostViewModel {
     private let model: UiRedditPost
+    private(set) var onCellTap: (String) -> Void
+    private(set) var onPostLinkTap: (String) -> Void
 
-    init(model: UiRedditPost) {
+    init(
+        model: UiRedditPost,
+        onCellTap: @escaping (String) -> Void,
+        onPostLinkTap: @escaping (String) -> Void
+    ) {
         self.model = model
+        self.onCellTap = onCellTap
+        self.onPostLinkTap = onPostLinkTap
     }
 
     var subreddit: String {
@@ -31,12 +39,12 @@ final class HomePostViewModel {
         return "\(dateString) by \(model.author)"
     }
 
-    var isThumbnailUrl: Bool {
-        model.urlIsThumbnailPreview
+    var thumbnail: String? {
+        model.thumbnail
     }
 
-    var url: URL? {
-        URL(string: model.url)
+    var size: CGSize? {
+        model.size
     }
 
     var upvotes: String {
@@ -45,6 +53,10 @@ final class HomePostViewModel {
 
     var comments: String {
         formatToK(number: model.numComments)
+    }
+
+    var detailLink: String {
+        model.detailLink
     }
 }
 
