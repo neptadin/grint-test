@@ -7,6 +7,10 @@
 
 import UIKit
 
-final class HomeViewController: UITableViewController {
-    
+final class HomeViewController: UITableViewController, Reusable {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
 }

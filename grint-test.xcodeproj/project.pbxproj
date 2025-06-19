@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		60B2AF5E0AAE182E32F87D58 /* Pods_grint_test_grint_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210177CC10D5EE9D7FCA1E82 /* Pods_grint_test_grint_testUITests.framework */; };
+		707011632E03926F00134CC4 /* AppCompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011622E03926800134CC4 /* AppCompositionRoot.swift */; };
+		707011652E0393B900134CC4 /* HomeCompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011642E0393B300134CC4 /* HomeCompositionRoot.swift */; };
+		707011682E03944800134CC4 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707011672E03944500134CC4 /* Reusable.swift */; };
 		7085B0E92E03849F000AE56C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0DC2E03849F000AE56C /* AppDelegate.swift */; };
 		7085B0EA2E03849F000AE56C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0DD2E03849F000AE56C /* SceneDelegate.swift */; };
 		7085B0EB2E03849F000AE56C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085B0E02E03849F000AE56C /* HomeViewController.swift */; };
@@ -44,6 +47,9 @@
 		210177CC10D5EE9D7FCA1E82 /* Pods_grint_test_grint_testUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_grint_test_grint_testUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		408A8F5426C0CDECDA7A4070 /* Pods-grint-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grint-testTests.release.xcconfig"; path = "Target Support Files/Pods-grint-testTests/Pods-grint-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		5AB8F292E1998FA28E2E90D4 /* Pods-grint-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grint-testTests.debug.xcconfig"; path = "Target Support Files/Pods-grint-testTests/Pods-grint-testTests.debug.xcconfig"; sourceTree = "<group>"; };
+		707011622E03926800134CC4 /* AppCompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCompositionRoot.swift; sourceTree = "<group>"; };
+		707011642E0393B300134CC4 /* HomeCompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCompositionRoot.swift; sourceTree = "<group>"; };
+		707011672E03944500134CC4 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		7085B0DC2E03849F000AE56C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7085B0DD2E03849F000AE56C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7085B0DF2E03849F000AE56C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -91,13 +97,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7085B0DE2E03849F000AE56C /* Lifecycle */ = {
+		707011612E03924B00134CC4 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				7085B0DC2E03849F000AE56C /* AppDelegate.swift */,
+				707011622E03926800134CC4 /* AppCompositionRoot.swift */,
 				7085B0DD2E03849F000AE56C /* SceneDelegate.swift */,
 			);
-			path = Lifecycle;
+			path = App;
+			sourceTree = "<group>";
+		};
+		707011662E03943E00134CC4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				707011672E03944500134CC4 /* Reusable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		7085B0E12E03849F000AE56C /* Home */ = {
@@ -105,6 +120,7 @@
 			children = (
 				7085B0DF2E03849F000AE56C /* Home.storyboard */,
 				7085B0E02E03849F000AE56C /* HomeViewController.swift */,
+				707011642E0393B300134CC4 /* HomeCompositionRoot.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -112,6 +128,7 @@
 		7085B0E22E03849F000AE56C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				707011612E03924B00134CC4 /* App */,
 				7085B0E12E03849F000AE56C /* Home */,
 			);
 			path = Modules;
@@ -129,7 +146,7 @@
 		7085B0E82E03849F000AE56C /* grint-test */ = {
 			isa = PBXGroup;
 			children = (
-				7085B0DE2E03849F000AE56C /* Lifecycle */,
+				707011662E03943E00134CC4 /* Extensions */,
 				7085B0E22E03849F000AE56C /* Modules */,
 				7085B0E62E03849F000AE56C /* Resources */,
 				7085B0E72E03849F000AE56C /* Info.plist */,
@@ -339,9 +356,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-grint-test-grint-testUITests/Pods-grint-test-grint-testUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-grint-test-grint-testUITests/Pods-grint-test-grint-testUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -356,9 +377,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-grint-test/Pods-grint-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-grint-test/Pods-grint-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -438,6 +463,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				707011682E03944800134CC4 /* Reusable.swift in Sources */,
+				707011632E03926F00134CC4 /* AppCompositionRoot.swift in Sources */,
+				707011652E0393B900134CC4 /* HomeCompositionRoot.swift in Sources */,
 				7085B0E92E03849F000AE56C /* AppDelegate.swift in Sources */,
 				7085B0EA2E03849F000AE56C /* SceneDelegate.swift in Sources */,
 				7085B0EB2E03849F000AE56C /* HomeViewController.swift in Sources */,
