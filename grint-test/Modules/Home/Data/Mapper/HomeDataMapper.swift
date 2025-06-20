@@ -7,4 +7,7 @@
 
 protocol HomeDataMapper {
     func dataToDomain(_ value: ApiRedditPostResponse) -> RedditPostsEntry
+
+    func domainToData(_ value: RedditPostsEntry) -> CodableRedditPostsEntry
+    func dataToDomain(_ value: CodableRedditPostsEntry?) -> RedditPostsEntry?
 }

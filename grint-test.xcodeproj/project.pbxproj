@@ -57,6 +57,16 @@
 		70AB29512E04D56F001B7894 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29502E04D56B001B7894 /* UITableView.swift */; };
 		70AB29532E04DA9B001B7894 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29522E04DA97001B7894 /* UIViewController.swift */; };
 		70AB29582E04DD9F001B7894 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29572E04DD93001B7894 /* Coordinator.swift */; };
+		70AB295F2E04E99B001B7894 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB295E2E04E995001B7894 /* PostDetailViewController.swift */; };
+		70AB29622E04EBC8001B7894 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29612E04EBC4001B7894 /* PostDetailViewModel.swift */; };
+		70AB29642E04EF99001B7894 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AB29632E04EF99001B7894 /* WebKit.framework */; };
+		70AB29672E04F720001B7894 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29662E04F71D001B7894 /* LocalStorage.swift */; };
+		70AB296A2E04F7BA001B7894 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29692E04F7B2001B7894 /* UserDefaultsManager.swift */; };
+		70AB296C2E04F832001B7894 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB296B2E04F82E001B7894 /* UserDefaults.swift */; };
+		70AB296E2E04F93F001B7894 /* CodableRedditPostsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB296D2E04F93B001B7894 /* CodableRedditPostsEntry.swift */; };
+		70AB29702E04F94A001B7894 /* CodableRedditPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB296F2E04F945001B7894 /* CodableRedditPost.swift */; };
+		70AB29722E04F9C8001B7894 /* HomeLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29712E04F9C2001B7894 /* HomeLocalDataSource.swift */; };
+		70AB29742E04FA04001B7894 /* HomeLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29732E04F9FE001B7894 /* HomeLocalDataSourceImpl.swift */; };
 		BEED65CCA2E433617FEB8460 /* Pods_grint_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF5967524A9E72EB467B4E1 /* Pods_grint_testTests.framework */; };
 		F970F673A09FF8FD76ED9D8A /* Pods_grint_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98CEA2A7227847BCF5FCFC6E /* Pods_grint_test.framework */; };
 /* End PBXBuildFile section */
@@ -134,6 +144,16 @@
 		70AB29502E04D56B001B7894 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		70AB29522E04DA97001B7894 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		70AB29572E04DD93001B7894 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		70AB295E2E04E995001B7894 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		70AB29612E04EBC4001B7894 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
+		70AB29632E04EF99001B7894 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		70AB29662E04F71D001B7894 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		70AB29692E04F7B2001B7894 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		70AB296B2E04F82E001B7894 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		70AB296D2E04F93B001B7894 /* CodableRedditPostsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableRedditPostsEntry.swift; sourceTree = "<group>"; };
+		70AB296F2E04F945001B7894 /* CodableRedditPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableRedditPost.swift; sourceTree = "<group>"; };
+		70AB29712E04F9C2001B7894 /* HomeLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLocalDataSource.swift; sourceTree = "<group>"; };
+		70AB29732E04F9FE001B7894 /* HomeLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLocalDataSourceImpl.swift; sourceTree = "<group>"; };
 		70DFF1B42E034871004F4EFF /* grint-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "grint-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF1CA2E034872004F4EFF /* grint-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grint-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF1D42E034872004F4EFF /* grint-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grint-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70AB29642E04EF99001B7894 /* WebKit.framework in Frameworks */,
 				F970F673A09FF8FD76ED9D8A /* Pods_grint_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,6 +205,7 @@
 		707011662E03943E00134CC4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				70AB296B2E04F82E001B7894 /* UserDefaults.swift */,
 				70AB29522E04DA97001B7894 /* UIViewController.swift */,
 				70AB29502E04D56B001B7894 /* UITableView.swift */,
 				70AB294E2E04B259001B7894 /* UIButton.swift */,
@@ -248,6 +270,8 @@
 		7070117E2E03AFDF00134CC4 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				70AB296D2E04F93B001B7894 /* CodableRedditPostsEntry.swift */,
+				70AB296F2E04F945001B7894 /* CodableRedditPost.swift */,
 				707011852E03B23200134CC4 /* ApiRedditPost.swift */,
 				707011832E03B22500134CC4 /* ApiRedditPostChildren.swift */,
 				707011812E03B21A00134CC4 /* ApiRedditPostResponse.swift */,
@@ -258,6 +282,8 @@
 		707011872E03B34900134CC4 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				70AB29712E04F9C2001B7894 /* HomeLocalDataSource.swift */,
+				70AB29732E04F9FE001B7894 /* HomeLocalDataSourceImpl.swift */,
 				707011882E03B35C00134CC4 /* HomeRemoteDataSource.swift */,
 				7070118A2E03B41800134CC4 /* HomeRemoteDataSourceImpl.swift */,
 			);
@@ -370,8 +396,9 @@
 			isa = PBXGroup;
 			children = (
 				7085B0E12E03849F000AE56C /* Home */,
-				7070116D2E0397F500134CC4 /* Network */,
 				7070118C2E03BA1300134CC4 /* Core */,
+				7070116D2E0397F500134CC4 /* Network */,
+				70AB29652E04F6DA001B7894 /* LocalStorage */,
 				707011612E03924B00134CC4 /* App */,
 			);
 			path = Modules;
@@ -425,6 +452,7 @@
 		70AB293A2E046986001B7894 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				70AB295D2E04E98B001B7894 /* PostDetail */,
 				70AB295A2E04DF34001B7894 /* Home */,
 			);
 			path = Controllers;
@@ -433,6 +461,7 @@
 		70AB293B2E046A5D001B7894 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				70AB29602E04EBBB001B7894 /* PostDetail */,
 				70AB295C2E04DF55001B7894 /* Home */,
 			);
 			path = ViewModel;
@@ -490,6 +519,39 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		70AB295D2E04E98B001B7894 /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+				70AB295E2E04E995001B7894 /* PostDetailViewController.swift */,
+			);
+			path = PostDetail;
+			sourceTree = "<group>";
+		};
+		70AB29602E04EBBB001B7894 /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+				70AB29612E04EBC4001B7894 /* PostDetailViewModel.swift */,
+			);
+			path = PostDetail;
+			sourceTree = "<group>";
+		};
+		70AB29652E04F6DA001B7894 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				70AB29682E04F7A7001B7894 /* Manager */,
+				70AB29662E04F71D001B7894 /* LocalStorage.swift */,
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		70AB29682E04F7A7001B7894 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				70AB29692E04F7B2001B7894 /* UserDefaultsManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		70DFF1AB2E034871004F4EFF = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +590,7 @@
 		E9B7E935DA9531E5C2A31684 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				70AB29632E04EF99001B7894 /* WebKit.framework */,
 				98CEA2A7227847BCF5FCFC6E /* Pods_grint_test.framework */,
 				210177CC10D5EE9D7FCA1E82 /* Pods_grint_test_grint_testUITests.framework */,
 				EBF5967524A9E72EB467B4E1 /* Pods_grint_testTests.framework */,
@@ -788,6 +851,7 @@
 				707011682E03944800134CC4 /* Reusable.swift in Sources */,
 				70AB29352E045F8F001B7894 /* AnyAsyncUseCase.swift in Sources */,
 				70AB293D2E046B42001B7894 /* HomeViewModel.swift in Sources */,
+				70AB29622E04EBC8001B7894 /* PostDetailViewModel.swift in Sources */,
 				7070119B2E03BCD900134CC4 /* HomeRepository.swift in Sources */,
 				707011842E03B22500134CC4 /* ApiRedditPostChildren.swift in Sources */,
 				707011632E03926F00134CC4 /* AppCompositionRoot.swift in Sources */,
@@ -809,22 +873,30 @@
 				7085B0E92E03849F000AE56C /* AppDelegate.swift in Sources */,
 				7070118B2E03B41E00134CC4 /* HomeRemoteDataSourceImpl.swift in Sources */,
 				70AB29472E04865D001B7894 /* HomePostViewModel.swift in Sources */,
+				70AB29742E04FA04001B7894 /* HomeLocalDataSourceImpl.swift in Sources */,
 				707011822E03B21A00134CC4 /* ApiRedditPostResponse.swift in Sources */,
 				707011912E03BAB700134CC4 /* SyncUseCase.swift in Sources */,
 				707011992E03BCD100134CC4 /* HomeDataSource.swift in Sources */,
+				70AB296A2E04F7BA001B7894 /* UserDefaultsManager.swift in Sources */,
 				707011AE2E03C8FC00134CC4 /* HomeDomainMapperImpl.swift in Sources */,
 				707011952E03BC8900134CC4 /* RedditPost.swift in Sources */,
 				70AB29492E04ACBF001B7894 /* UIImageView.swift in Sources */,
 				70AB29582E04DD9F001B7894 /* Coordinator.swift in Sources */,
 				7085B0EA2E03849F000AE56C /* SceneDelegate.swift in Sources */,
+				70AB296C2E04F832001B7894 /* UserDefaults.swift in Sources */,
 				7070119D2E03BD1600134CC4 /* HomeDataMapper.swift in Sources */,
+				70AB29672E04F720001B7894 /* LocalStorage.swift in Sources */,
+				70AB296E2E04F93F001B7894 /* CodableRedditPostsEntry.swift in Sources */,
+				70AB29722E04F9C8001B7894 /* HomeLocalDataSource.swift in Sources */,
 				70AB294D2E04B1E1001B7894 /* NSMutableAttributedString.swift in Sources */,
 				707011B22E03D1D600134CC4 /* FetchPostsUseCase.swift in Sources */,
+				70AB29702E04F94A001B7894 /* CodableRedditPost.swift in Sources */,
 				7070119F2E03BD1D00134CC4 /* HomeDataMapperImpl.swift in Sources */,
 				707011892E03B36400134CC4 /* HomeRemoteDataSource.swift in Sources */,
 				70AB29512E04D56F001B7894 /* UITableView.swift in Sources */,
 				70AB29372E0465D1001B7894 /* AnySyncUseCase.swift in Sources */,
 				7085B0EB2E03849F000AE56C /* HomeViewController.swift in Sources */,
+				70AB295F2E04E99B001B7894 /* PostDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

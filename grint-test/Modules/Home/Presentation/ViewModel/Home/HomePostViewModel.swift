@@ -10,16 +10,13 @@ import Foundation
 final class HomePostViewModel {
     private let model: UiRedditPost
     private(set) var onCellTap: (String) -> Void
-    private(set) var onPostLinkTap: (String) -> Void
 
     init(
         model: UiRedditPost,
-        onCellTap: @escaping (String) -> Void,
-        onPostLinkTap: @escaping (String) -> Void
+        onCellTap: @escaping (String) -> Void
     ) {
         self.model = model
         self.onCellTap = onCellTap
-        self.onPostLinkTap = onPostLinkTap
     }
 
     var subreddit: String {
@@ -52,7 +49,7 @@ final class HomePostViewModel {
     }
 
     var comments: String {
-        formatToK(number: model.numComments)
+        formatToK(number: model.numComments, rounded: false)
     }
 
     var detailLink: String {
@@ -61,13 +58,14 @@ final class HomePostViewModel {
 }
 
 extension HomePostViewModel {
-    func formatToK(number: Int) -> String {
-        if number >= 1_000 {
+    func formatToK(number: Int, rounded: Bool = true) -> String {
+        if number >= 1000 {
             let formatted = Double(number) / 1000.0
-            if formatted.truncatingRemainder(dividingBy: 1) == 0 {
-                return "\(Int(formatted))k"
+            if rounded {
+                let rounded = Int(round(formatted))
+                return ("\(rounded)K")
             } else {
-                return String(format: "%.1fk", formatted)
+                return String(format: "%.1fK", formatted)
             }
         } else {
             return "\(number)"

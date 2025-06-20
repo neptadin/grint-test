@@ -18,23 +18,26 @@ final class HomeViewModel {
     private var nextPage: String?
 
     var onLoadingStateChanged: Observer<Bool>?
+    var onErrorStateChanged: Observer<Bool>?
     var onPostsLoaded: Observer<[UiRedditPost]>?
+
 
     func loadPosts() {
         onLoadingStateChanged?(true)
-        fetchPostsUseCase.execute(nextPage) { [weak self] result in
+        onErrorStateChanged?(false)
+
+        fetchPostsUseCase.execute((nextPage, isFirstLoad)) { [weak self] result in
             guard let self else { return }
-            defer {
-                onLoadingStateChanged?(false)
-                isFirstLoad = false
-            }
 
             switch result {
             case let .success(postsEntry):
                 nextPage = postsEntry.after
                 onPostsLoaded?(postsEntry.posts)
+                onLoadingStateChanged?(false)
+                isFirstLoad = false
             case .failure:
-                debugPrint("Failure")
+                onLoadingStateChanged?(false)
+                onErrorStateChanged?(true)
             }
         }
     }

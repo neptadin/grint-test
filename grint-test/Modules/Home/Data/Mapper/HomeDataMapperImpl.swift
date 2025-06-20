@@ -34,4 +34,46 @@ struct HomeDataMapperImpl: HomeDataMapper {
         }
         return .init(after: value.after, posts: posts)
     }
+
+    func domainToData(_ value: RedditPostsEntry) -> CodableRedditPostsEntry {
+        .init(
+            after: value.after,
+            posts: value.posts.map {
+                CodableRedditPost(
+                    title: $0.title,
+                    author: $0.author,
+                    created: $0.created,
+                    ups: $0.ups,
+                    numComments: $0.numComments,
+                    subreddit: $0.subreddit,
+                    detailLink: $0.detailLink,
+                    thumbnail: $0.thumbnail,
+                    size: $0.size
+                )
+            }
+        )
+    }
+
+    func dataToDomain(_ value: CodableRedditPostsEntry?) -> RedditPostsEntry? {
+        guard let value else {
+            return nil
+        }
+
+        return .init(
+            after: value.after,
+            posts: value.posts.map {
+                RedditPost(
+                    title: $0.title,
+                    author: $0.author,
+                    created: $0.created,
+                    ups: $0.ups,
+                    numComments: $0.numComments,
+                    subreddit: $0.subreddit,
+                    detailLink: $0.detailLink,
+                    thumbnail: $0.thumbnail,
+                    size: $0.size
+                )
+            }
+        )
+    }
 }

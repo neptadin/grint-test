@@ -6,5 +6,10 @@
 //
 
 protocol HomeDataSource {
+    // Remote
     func fetchPosts(page: String?) async -> Result<RedditPostsEntry, Error>
+
+    // Local
+    func getLocalPosts() -> RedditPostsEntry?
+    func saveLocalPosts(_ posts: RedditPostsEntry)
 }

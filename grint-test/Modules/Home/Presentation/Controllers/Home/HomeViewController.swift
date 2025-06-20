@@ -9,13 +9,13 @@ import UIKit
 import Alamofire
 
 final class HomeViewController: UIViewController, Reusable {
+    private enum Constants {
+        static let paginationOffset = 100.0
+    }
 
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var tableView: UITableView!
-
-    var tableModel = [HomePostController]() {
-        didSet { tableView.reloadData() }
-    }
+    @IBOutlet var retryButton: UIButton!
 
     var viewModel: HomeViewModel
 
@@ -27,7 +27,19 @@ final class HomeViewController: UIViewController, Reusable {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
+    var tableModel = [HomePostController]() {
+        didSet { tableView.reloadData() }
+    }
+    var footerIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.color = .white
+        activityIndicator.hidesWhenStopped = true
+        return activityIndicator
+    }()
+    var viewIsLoading = false
+    var hasStoppedScrolling = true
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,24 +56,37 @@ private extension HomeViewController {
     func setupUI() {
         view.backgroundColor = .black
 
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.backgroundColor = .clear
         tableView.registerNib(for: HomePostCell.self)
+        tableView.tableFooterView = footerIndicator
     }
 
     func bind() {
         viewModel.onLoadingStateChanged = { [weak self] loading in
             guard let self else { return }
+            viewIsLoading = loading
 
             if viewModel.isFirstLoad {
-                loading ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
+                viewIsLoading ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
             } else {
-                
+                viewIsLoading ? footerIndicator.startAnimating() : footerIndicator.stopAnimating()
             }
         }
+
+        viewModel.onErrorStateChanged = { [weak self] errorFound in
+            guard let self else { return }
+            retryButton.isHidden = !(errorFound && viewModel.isFirstLoad)
+        }
+    }
+
+    @IBAction func retryLoad() {
+        viewModel.loadPosts()
     }
 }
 
-// MARK: - Table View
+// MARK: - Table View Data Source
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tableModel.count
@@ -73,5 +98,35 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
     private func cellController(for indexPath: IndexPath) -> HomePostController {
         tableModel[indexPath.row]
+    }
+}
+
+// MARK: - Scroll View Delegate
+extension HomeViewController: UIScrollViewDelegate {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        hasStoppedScrolling = false
+    }
+
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            onScrollStopped(scrollView: scrollView)
+        }
+    }
+
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        onScrollStopped(scrollView: scrollView)
+    }
+
+    func onScrollStopped(scrollView: UIScrollView) {
+        guard !hasStoppedScrolling else { return }
+        hasStoppedScrolling = true
+
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+
+        if offsetY > contentHeight - height - Constants.paginationOffset, !viewIsLoading {
+            viewModel.loadPosts()
+        }
     }
 }

@@ -6,7 +6,7 @@
 //
 
 final class FetchPostsUseCase: AsyncUseCase {
-    typealias Input = String?
+    typealias Input = (nextPage: String?, isFirstLoad: Bool)
     typealias Output = UiRedditPostsEntry
     typealias Alias = AnyAsyncUseCase<Input, Output>
 
@@ -20,14 +20,34 @@ final class FetchPostsUseCase: AsyncUseCase {
 
     func execute(_ input: Input, _ onCompletion: @escaping (Result<Output, Error>) -> Void) {
         Task {
-            let domainPosts = await repository.fetchPosts(page: input)
-            let presentationPosts = domainPosts.map { [mapper] result in
+            let domainResult = await fetchWithFallback(input: input)
+            let presentationResult = domainResult.map { [mapper] result in
                 mapper.domainToPresentation(result)
             }
-
             await MainActor.run {
-                onCompletion(presentationPosts)
+                onCompletion(presentationResult)
             }
+        }
+    }
+
+    private func fetchWithFallback(input: Input) async -> Result<RedditPostsEntry, Error> {
+        let result = await repository.fetchPosts(page: input.nextPage)
+
+        switch result {
+        case .success(let posts):
+            if input.isFirstLoad {
+                repository.saveLocalPosts(posts)
+            }
+            return .success(posts)
+
+        case .failure(let error):
+            guard
+                let fallbackPosts = repository.getLocalPosts(), input.isFirstLoad
+            else {
+                return .failure(error)
+            }
+
+            return .success(fallbackPosts)
         }
     }
 }

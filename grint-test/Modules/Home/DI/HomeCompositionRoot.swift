@@ -11,14 +11,20 @@ import Alamofire
 final class HomeCompositionRoot {
     static func makeHomeViewController() -> HomeViewController {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        let homeViewController = storyboard.instantiateViewController(
+        let homeViewController: HomeViewController = storyboard.instantiateViewController(
             identifier: HomeViewController.identifier,
             creator: { coder in
                 // Data
                 let networkManager = AlamofireManagerImpl(session: AF)
                 let remoteDataSource = HomeRemoteDataSourceImpl(networkManager: networkManager)
+                let localStorage = UserDefaultsManager(userDefaults: .standard)
+                let localDataSource = HomeLocalDataSourceImpl(userDefaults: localStorage)
                 let homeDataMapper = HomeDataMapperImpl()
-                let homeRepository = HomeRepository(remote: remoteDataSource, mapper: homeDataMapper)
+                let homeRepository = HomeRepository(
+                    remote: remoteDataSource,
+                    local: localDataSource,
+                    mapper: homeDataMapper
+                )
 
                 // Domain
                 let homeDomainMapper = HomeDomainMapperImpl()
@@ -30,7 +36,7 @@ final class HomeCompositionRoot {
                 let homeViewModel = HomeViewModel(fetchPostsUseCase: fetchPostsUseCase)
                 return HomeViewController(coder: coder, viewModel: homeViewModel)
             }
-        ) as! HomeViewController
+        )
 
         homeViewController.viewModel.onPostsLoaded = adaptPostsToCellControllers(forwardingTo: homeViewController)
 
@@ -44,14 +50,28 @@ final class HomeCompositionRoot {
                     viewModel: .init(
                         model: $0,
                         onCellTap: { detailLink in
-                            debugPrint(detailLink)
-                        },
-                        onPostLinkTap: { postLink in
-                            debugPrint(postLink)
+                            let postDetailViewController = makePostDetailViewController(detailLink: detailLink)
+                            controller?.navigationController?.pushViewController(postDetailViewController, animated: true)
                         }
                     )
                 )
             }
         }
+    }
+}
+
+extension HomeCompositionRoot {
+    static func makePostDetailViewController(detailLink: String) -> PostDetailViewController {
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        let postDetailViewController: PostDetailViewController = storyboard.instantiateViewController(
+            identifier: PostDetailViewController.identifier,
+            creator: { coder in
+                // Presentation
+                let postDetailViewModel = PostDetailViewModel(urlString: detailLink)
+                return PostDetailViewController(coder: coder, viewModel: postDetailViewModel)
+            }
+        )
+
+        return postDetailViewController
     }
 }

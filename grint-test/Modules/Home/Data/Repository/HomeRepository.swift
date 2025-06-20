@@ -7,10 +7,16 @@
 
 final class HomeRepository: HomeDataSource {
     private let remote: HomeRemoteDataSource
+    private let local: HomeLocalDataSource
     private let mapper: HomeDataMapper
 
-    init(remote: HomeRemoteDataSource, mapper: HomeDataMapper) {
+    init(
+        remote: HomeRemoteDataSource,
+        local: HomeLocalDataSource,
+        mapper: HomeDataMapper
+    ) {
         self.remote = remote
+        self.local = local
         self.mapper = mapper
     }
 
@@ -22,5 +28,18 @@ final class HomeRepository: HomeDataSource {
         }
 
         return domainPosts
+    }
+}
+
+// MARK: - Local
+extension HomeRepository {
+    func getLocalPosts() -> RedditPostsEntry? {
+        let localPosts = local.getLocalPosts()
+        return mapper.dataToDomain(localPosts)
+    }
+
+    func saveLocalPosts(_ posts: RedditPostsEntry) {
+        let localPosts = mapper.domainToData(posts)
+        local.saveLocalPosts(posts: localPosts)
     }
 }

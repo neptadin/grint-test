@@ -30,5 +30,7 @@ final class AppCompositionRoot {
         if #available(iOS 15.0, *) {
             navBar.compactScrollEdgeAppearance = appearance
         }
+
+        navBar.tintColor = .white
     }
 }

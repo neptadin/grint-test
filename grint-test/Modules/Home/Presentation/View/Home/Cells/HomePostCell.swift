@@ -17,7 +17,9 @@ final class HomePostCell: UITableViewCell, Reusable, ImageResizable {
     @IBOutlet var postInformationLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var postImageView: UIImageView!
+    @IBOutlet var upvotesContainer: UIView!
     @IBOutlet var upvotesLabel: UILabel!
+    @IBOutlet var commentsContainer: UIView!
     @IBOutlet var commentsLabel: UILabel!
 
     private var aspectRatioConstraint: NSLayoutConstraint?
@@ -32,6 +34,12 @@ final class HomePostCell: UITableViewCell, Reusable, ImageResizable {
         contentView.addGestureRecognizer(contentViewGestureRecognizer)
 
         postImageView.layer.cornerRadius = 15.0
+
+        [upvotesContainer, commentsContainer].forEach {
+            $0.layer.borderWidth = 1.0
+            $0.layer.borderColor = UIColor.white.cgColor
+            $0.layer.cornerRadius = $0.layer.bounds.height / 2.0
+        }
     }
 
     func setImage(imageUrl: String?, size: CGSize?) {

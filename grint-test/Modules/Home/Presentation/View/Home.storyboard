@@ -19,14 +19,22 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iz0-KP-ca4">
                                 <rect key="frame" x="0.0" y="118" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="l7L-nm-LqP" id="hFv-dA-Bp3"/>
-                                </connections>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="5yd-DO-CKl">
                                 <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rg-eu-ui8">
+                                <rect key="frame" x="153" y="404" width="87.333333333333314" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Retry">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                    <color key="baseForegroundColor" red="1" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="retryLoad" destination="l7L-nm-LqP" eventType="touchUpInside" id="Yhs-vp-l4o"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="czf-Xf-U3L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -34,13 +42,16 @@
                             <constraint firstItem="czf-Xf-U3L" firstAttribute="bottom" secondItem="iz0-KP-ca4" secondAttribute="bottom" id="574-zm-TnE"/>
                             <constraint firstItem="5yd-DO-CKl" firstAttribute="centerY" secondItem="z50-eR-usl" secondAttribute="centerY" id="8VI-a6-D1K"/>
                             <constraint firstItem="iz0-KP-ca4" firstAttribute="top" secondItem="czf-Xf-U3L" secondAttribute="top" id="Auq-08-RVq"/>
+                            <constraint firstItem="4rg-eu-ui8" firstAttribute="centerY" secondItem="z50-eR-usl" secondAttribute="centerY" id="Ral-LD-8xS"/>
                             <constraint firstItem="czf-Xf-U3L" firstAttribute="trailing" secondItem="iz0-KP-ca4" secondAttribute="trailing" id="kaZ-UY-y4K"/>
                             <constraint firstItem="5yd-DO-CKl" firstAttribute="centerX" secondItem="z50-eR-usl" secondAttribute="centerX" id="n6X-v2-5F4"/>
+                            <constraint firstItem="4rg-eu-ui8" firstAttribute="centerX" secondItem="z50-eR-usl" secondAttribute="centerX" id="trp-GT-yg2"/>
                             <constraint firstItem="iz0-KP-ca4" firstAttribute="leading" secondItem="czf-Xf-U3L" secondAttribute="leading" id="wwF-rI-Deh"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="5yd-DO-CKl" id="0rV-Wq-G3g"/>
+                        <outlet property="retryButton" destination="4rg-eu-ui8" id="MBd-gh-Coi"/>
                         <outlet property="tableView" destination="iz0-KP-ca4" id="lGl-Hf-E6P"/>
                     </connections>
                 </viewController>
@@ -48,16 +59,35 @@
             </objects>
             <point key="canvasLocation" x="-1089" y="-69"/>
         </scene>
-        <!--View Controller-->
+        <!--Post Detail View Controller-->
         <scene sceneID="puC-Jq-veH">
             <objects>
-                <viewController storyboardIdentifier="PostDetailViewController" id="XvJ-Kb-doM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostDetailViewController" id="XvJ-Kb-doM" customClass="PostDetailViewController" customModule="grint_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SFf-FB-6hp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RvZ-k7-AWE">
+                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xXx-A2-ZeW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xXx-A2-ZeW" firstAttribute="trailing" secondItem="RvZ-k7-AWE" secondAttribute="trailing" id="Lvu-xe-HUg"/>
+                            <constraint firstItem="RvZ-k7-AWE" firstAttribute="top" secondItem="xXx-A2-ZeW" secondAttribute="top" id="m4U-h8-O60"/>
+                            <constraint firstItem="xXx-A2-ZeW" firstAttribute="bottom" secondItem="RvZ-k7-AWE" secondAttribute="bottom" id="vgu-Zk-2YJ"/>
+                            <constraint firstItem="RvZ-k7-AWE" firstAttribute="leading" secondItem="xXx-A2-ZeW" secondAttribute="leading" id="z2G-EL-LHJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="RvZ-k7-AWE" id="wXy-bc-TeZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWY-3C-uBz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
