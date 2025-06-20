@@ -56,6 +56,7 @@
 		70AB294F2E04B25B001B7894 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB294E2E04B259001B7894 /* UIButton.swift */; };
 		70AB29512E04D56F001B7894 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29502E04D56B001B7894 /* UITableView.swift */; };
 		70AB29532E04DA9B001B7894 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29522E04DA97001B7894 /* UIViewController.swift */; };
+		70AB29582E04DD9F001B7894 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29572E04DD93001B7894 /* Coordinator.swift */; };
 		BEED65CCA2E433617FEB8460 /* Pods_grint_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF5967524A9E72EB467B4E1 /* Pods_grint_testTests.framework */; };
 		F970F673A09FF8FD76ED9D8A /* Pods_grint_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98CEA2A7227847BCF5FCFC6E /* Pods_grint_test.framework */; };
 /* End PBXBuildFile section */
@@ -132,6 +133,7 @@
 		70AB294E2E04B259001B7894 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		70AB29502E04D56B001B7894 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		70AB29522E04DA97001B7894 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		70AB29572E04DD93001B7894 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		70DFF1B42E034871004F4EFF /* grint-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "grint-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF1CA2E034872004F4EFF /* grint-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grint-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF1D42E034872004F4EFF /* grint-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grint-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				7070118D2E03BA3C00134CC4 /* Domain */,
+				70AB29562E04DD84001B7894 /* Presentation */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -366,10 +369,10 @@
 		7085B0E22E03849F000AE56C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				707011612E03924B00134CC4 /* App */,
-				7070118C2E03BA1300134CC4 /* Core */,
 				7085B0E12E03849F000AE56C /* Home */,
 				7070116D2E0397F500134CC4 /* Network */,
+				7070118C2E03BA1300134CC4 /* Core */,
+				707011612E03924B00134CC4 /* App */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -422,8 +425,7 @@
 		70AB293A2E046986001B7894 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				70AB29412E047925001B7894 /* HomePostController.swift */,
-				7085B0E02E03849F000AE56C /* HomeViewController.swift */,
+				70AB295A2E04DF34001B7894 /* Home */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -431,8 +433,7 @@
 		70AB293B2E046A5D001B7894 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				70AB29462E048659001B7894 /* HomePostViewModel.swift */,
-				70AB293C2E046B3F001B7894 /* HomeViewModel.swift */,
+				70AB295C2E04DF55001B7894 /* Home */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -440,7 +441,7 @@
 		70AB293E2E046E90001B7894 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				70AB29432E047935001B7894 /* Cells */,
+				70AB295B2E04DF44001B7894 /* Home */,
 				7085B0DF2E03849F000AE56C /* Home.storyboard */,
 			);
 			path = View;
@@ -453,6 +454,40 @@
 				70AB293F2E047895001B7894 /* HomePostCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		70AB29562E04DD84001B7894 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				70AB29572E04DD93001B7894 /* Coordinator.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		70AB295A2E04DF34001B7894 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				70AB29412E047925001B7894 /* HomePostController.swift */,
+				7085B0E02E03849F000AE56C /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		70AB295B2E04DF44001B7894 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				70AB29432E047935001B7894 /* Cells */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		70AB295C2E04DF55001B7894 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				70AB29462E048659001B7894 /* HomePostViewModel.swift */,
+				70AB293C2E046B3F001B7894 /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		70DFF1AB2E034871004F4EFF = {
@@ -780,6 +815,7 @@
 				707011AE2E03C8FC00134CC4 /* HomeDomainMapperImpl.swift in Sources */,
 				707011952E03BC8900134CC4 /* RedditPost.swift in Sources */,
 				70AB29492E04ACBF001B7894 /* UIImageView.swift in Sources */,
+				70AB29582E04DD9F001B7894 /* Coordinator.swift in Sources */,
 				7085B0EA2E03849F000AE56C /* SceneDelegate.swift in Sources */,
 				7070119D2E03BD1600134CC4 /* HomeDataMapper.swift in Sources */,
 				70AB294D2E04B1E1001B7894 /* NSMutableAttributedString.swift in Sources */,
