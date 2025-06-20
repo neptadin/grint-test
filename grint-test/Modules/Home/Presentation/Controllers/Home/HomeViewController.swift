@@ -11,6 +11,7 @@ import Alamofire
 final class HomeViewController: UIViewController, Reusable {
     private enum Constants {
         static let paginationOffset = 100.0
+        static let paginationFetchDelay: TimeInterval = 0.3
     }
 
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
@@ -38,7 +39,7 @@ final class HomeViewController: UIViewController, Reusable {
         return activityIndicator
     }()
     var viewIsLoading = false
-    var hasStoppedScrolling = true
+    var debounceScrollTimer: Timer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,30 +104,22 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
 // MARK: - Scroll View Delegate
 extension HomeViewController: UIScrollViewDelegate {
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        hasStoppedScrolling = false
-    }
-
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if !decelerate {
-            onScrollStopped(scrollView: scrollView)
-        }
-    }
-
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        onScrollStopped(scrollView: scrollView)
-    }
-
-    func onScrollStopped(scrollView: UIScrollView) {
-        guard !hasStoppedScrolling else { return }
-        hasStoppedScrolling = true
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard !viewIsLoading else { return }
 
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         let height = scrollView.frame.size.height
 
         if offsetY > contentHeight - height - Constants.paginationOffset, !viewIsLoading {
-            viewModel.loadPosts()
+            debounceScrollTimer?.invalidate()
+
+            debounceScrollTimer = Timer.scheduledTimer(
+                withTimeInterval: Constants.paginationFetchDelay,
+                repeats: false
+            ) { [weak self] _ in
+                self?.viewModel.loadPosts()
+            }
         }
     }
 }
