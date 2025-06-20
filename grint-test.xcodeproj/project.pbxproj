@@ -55,6 +55,7 @@
 		70AB294D2E04B1E1001B7894 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB294C2E04B1D9001B7894 /* NSMutableAttributedString.swift */; };
 		70AB294F2E04B25B001B7894 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB294E2E04B259001B7894 /* UIButton.swift */; };
 		70AB29512E04D56F001B7894 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29502E04D56B001B7894 /* UITableView.swift */; };
+		70AB29532E04DA9B001B7894 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB29522E04DA97001B7894 /* UIViewController.swift */; };
 		BEED65CCA2E433617FEB8460 /* Pods_grint_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF5967524A9E72EB467B4E1 /* Pods_grint_testTests.framework */; };
 		F970F673A09FF8FD76ED9D8A /* Pods_grint_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98CEA2A7227847BCF5FCFC6E /* Pods_grint_test.framework */; };
 /* End PBXBuildFile section */
@@ -130,6 +131,7 @@
 		70AB294C2E04B1D9001B7894 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		70AB294E2E04B259001B7894 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		70AB29502E04D56B001B7894 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		70AB29522E04DA97001B7894 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		70DFF1B42E034871004F4EFF /* grint-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "grint-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF1CA2E034872004F4EFF /* grint-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grint-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF1D42E034872004F4EFF /* grint-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grint-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +182,7 @@
 		707011662E03943E00134CC4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				70AB29522E04DA97001B7894 /* UIViewController.swift */,
 				70AB29502E04D56B001B7894 /* UITableView.swift */,
 				70AB294E2E04B259001B7894 /* UIButton.swift */,
 				70AB294C2E04B1D9001B7894 /* NSMutableAttributedString.swift */,
@@ -756,6 +759,7 @@
 				707011762E039BCE00134CC4 /* NetworkConstants.swift in Sources */,
 				707011A52E03C47A00134CC4 /* HomeDomainMapper.swift in Sources */,
 				7070118F2E03BA4900134CC4 /* AsyncUseCase.swift in Sources */,
+				70AB29532E04DA9B001B7894 /* UIViewController.swift in Sources */,
 				707011782E039D7F00134CC4 /* HTTPMethod.swift in Sources */,
 				707011712E039A1400134CC4 /* AlamofireManagerImpl.swift in Sources */,
 				707011652E0393B900134CC4 /* HomeCompositionRoot.swift in Sources */,

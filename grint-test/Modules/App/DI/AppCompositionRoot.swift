@@ -14,4 +14,21 @@ final class AppCompositionRoot {
         window.rootViewController = nav
         window.makeKeyAndVisible()
     }
+
+    static func configureAppNavigationAppearance() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .black
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+
+        let navBar = UINavigationBar.appearance()
+        navBar.standardAppearance = appearance
+        navBar.scrollEdgeAppearance = appearance
+        navBar.compactAppearance = appearance
+
+        if #available(iOS 15.0, *) {
+            navBar.compactScrollEdgeAppearance = appearance
+        }
+    }
 }

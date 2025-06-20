@@ -31,6 +31,7 @@ final class HomeViewController: UIViewController, Reusable {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setNavigationBarLogo()
         setupUI()
         bind()
 
